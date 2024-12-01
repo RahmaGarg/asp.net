@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Atelier_2.Models.Reclamation>
+
+@{
+    ViewData["Title"] = "Voir Toutes les Réclamations";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Produit</th>
+            <th>Client</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reclamation in Model)
+        {
+            <tr>
+                <td>@reclamation.Id</td>
+                <td>@reclamation.Product.Désignation</td>
+                <td>@reclamation.User.UserName</td>
+                <td>@reclamation.Description</td>
+                <td>@reclamation.DateReclamation.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <!-- Bouton Traiter -->
+                    <a href="@Url.Action("TraiterReclamation", "Reclamation", new { id = reclamation.Id })" class="btn btn-primary">Traiter</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

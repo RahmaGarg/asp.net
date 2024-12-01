@@ -1,0 +1,24 @@
+﻿@model Atelier_2.Models.Reclamation
+
+@{
+    ViewData["Title"] = "Traiter la Réclamation";
+}
+
+<h2>Traiter la Réclamation</h2>
+
+<h4>Réclamation pour le produit: @Model.Product.Désignation</h4>
+<p><strong>Description:</strong> @Model.Description</p>
+<p><strong>Date de réclamation:</strong> @Model.DateReclamation.ToString("dd MMM yyyy")</p>
+<p><strong>État actuel:</strong> @Model.Etat</p>
+
+<!-- Ajouter un bouton pour rediriger vers l'ajout d'une intervention -->
+<!-- Ajouter un bouton pour rediriger vers l'ajout d'une intervention -->
+<!-- Lien pour ajouter une intervention -->
+<a href="@Url.Action("AjouterIntervention", "Intervention", new { reclamationId = Model.Id })" class="btn btn-primary">Ajouter une intervention</a>
+
+
+
+<!-- Retour à la liste des réclamations -->
+<div class="mt-3">
+    <a href="@Url.Action("All", "Reclamation")" class="btn btn-secondary">Retour à la liste des réclamations</a>
+</div>

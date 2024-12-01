@@ -1,0 +1,31 @@
+﻿@model Atelier_2.ViewModels.EditViewModel
+
+@{
+    ViewData["Title"] = Model.Id == 0 ? "Create Product" : "Edit Product";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label asp-for="Désignation" class="control-label"></label>
+        <input asp-for="Désignation" class="form-control" />
+        <span asp-validation-for="Désignation" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Prix" class="control-label"></label>
+        <input asp-for="Prix" class="form-control" />
+        <span asp-validation-for="Prix" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Catégorie" class="control-label"></label>
+        <input asp-for="Catégorie" class="form-control" />
+        <span asp-validation-for="Catégorie" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

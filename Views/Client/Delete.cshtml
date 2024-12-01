@@ -1,0 +1,18 @@
+﻿@model Atelier_2.Models.Client
+
+@{
+    ViewData["Title"] = "Delete Client";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="alert alert-warning">
+    <h4>Are you sure you want to delete this client?</h4>
+    <p><strong>@Model.ClientFirstName @Model.ClientLastName</strong></p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="ClientId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+</form>
