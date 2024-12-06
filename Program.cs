@@ -13,6 +13,7 @@ builder.Services.AddDbContextPool<AppDbContext>(options =>
 
 // Register repositories
 builder.Services.AddScoped<IRepository<Product>, SqlProductRepository>();
+builder.Services.AddScoped<IRepository<Piece>, SqlPieceRepository>();
 
 // Add ASP.NET Core Identity services
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()

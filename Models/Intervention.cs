@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.IO.Pipelines;
@@ -26,5 +27,10 @@ namespace Atelier_2.Models
 
         // Date de l'intervention
         public DateTime DateIntervention { get; set; }
+        // Clé étrangère pour l'utilisateur qui est le technicien
+        public string TechnicienId { get; set; }
+
+        // Navigation vers l'utilisateur (technicien)
+        public IdentityUser Technicien { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using Atelier_2.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Atelier_2.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241206160139_technicien")]
+    partial class technicien
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -66,6 +69,9 @@ namespace Atelier_2.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("InterventionId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nom")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -75,6 +81,8 @@ namespace Atelier_2.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("InterventionId");
 
                     b.ToTable("Pieces");
                 });
@@ -146,21 +154,6 @@ namespace Atelier_2.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Reclamations");
-                });
-
-            modelBuilder.Entity("InterventionPiece", b =>
-                {
-                    b.Property<int>("InterventionsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PiecesUtiliseesId")
-                        .HasColumnType("int");
-
-                    b.HasKey("InterventionsId", "PiecesUtiliseesId");
-
-                    b.HasIndex("PiecesUtiliseesId");
-
-                    b.ToTable("InterventionPiece");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -407,6 +400,17 @@ namespace Atelier_2.Migrations
                     b.Navigation("Technicien");
                 });
 
+            modelBuilder.Entity("Atelier_2.Models.Piece", b =>
+                {
+                    b.HasOne("Atelier_2.Models.Intervention", "Intervention")
+                        .WithMany("PiecesUtilisees")
+                        .HasForeignKey("InterventionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Intervention");
+                });
+
             modelBuilder.Entity("Atelier_2.Models.Reclamation", b =>
                 {
                     b.HasOne("Atelier_2.Models.Product", "Product")
@@ -424,21 +428,6 @@ namespace Atelier_2.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("InterventionPiece", b =>
-                {
-                    b.HasOne("Atelier_2.Models.Intervention", null)
-                        .WithMany()
-                        .HasForeignKey("InterventionsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Atelier_2.Models.Piece", null)
-                        .WithMany()
-                        .HasForeignKey("PiecesUtiliseesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -490,6 +479,11 @@ namespace Atelier_2.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Atelier_2.Models.Intervention", b =>
+                {
+                    b.Navigation("PiecesUtilisees");
                 });
 
             modelBuilder.Entity("Atelier_2.Models.Reclamation", b =>

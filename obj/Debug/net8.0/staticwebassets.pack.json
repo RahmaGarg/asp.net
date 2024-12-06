@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\js\\CustomScript.js"
     },
     {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\intervention.js",
+      "PackagePath": "staticwebassets\\js\\intervention.js"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

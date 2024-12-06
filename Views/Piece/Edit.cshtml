@@ -1,0 +1,24 @@
+﻿@model Atelier_2.ViewModels.EditPieceViewModel
+
+@{
+    ViewData["Title"] = "Edit Piece";
+}
+
+<h1>Edit Piece</h1>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="Nom" class="control-label"></label>
+        <input asp-for="Nom" class="form-control" />
+        <span asp-validation-for="Nom" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Prix" class="control-label"></label>
+        <input asp-for="Prix" class="form-control" />
+        <span asp-validation-for="Prix" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+</form>
+
+

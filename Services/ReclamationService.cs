@@ -39,7 +39,9 @@ namespace Atelier_2.Services
                     ReclamationId = reclamationId,
                     DateIntervention = DateTime.Now,
                     DureeIntervention = 2.5m, // Exemple: 2.5 heures d'intervention
-                    PiecesUtilisees = await _context.Pieces.Where(p => p.InterventionId == reclamationId).ToListAsync()
+                    PiecesUtilisees = await _context.Pieces
+                        .Where(p => p.Interventions.Any(i => i.ReclamationId == reclamationId))  // Assuming a relationship with Intervention
+                        .ToListAsync()
                 };
 
                 // Calculer le coût des pièces

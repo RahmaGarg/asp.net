@@ -90,6 +90,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJ2ZW50aW9uXEFqb3V0ZXJJbnRlcnZlbnRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ASUS/source/repos/Atelier_2/Views/Piece/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGllY2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/Atelier_2/Views/Piece/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGllY2VcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/Atelier_2/Views/Piece/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGllY2VcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/Atelier_2/Views/Piece/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGllY2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/Atelier_2/Views/Piece/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGllY2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ASUS/source/repos/Atelier_2/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

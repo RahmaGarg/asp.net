@@ -9,32 +9,46 @@
     </div>
 
     <div class="form-group">
+        <label for="TechnicienId">Technicien Assigné</label>
+        <select id="TechnicienId" name="TechnicienId" class="form-control" required>
+            <option value="">Sélectionner un technicien</option>
+            @foreach (var technicien in Model.Techniciens)
+            {
+                <option value="@technicien.Value">@technicien.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
         <label for="DureeIntervention">Durée d'Intervention (en heures)</label>
-        <input type="number" class="form-control" id="DureeIntervention" name="DureeIntervention" required />
+        <input type="number" class="form-control" id="DureeIntervention" name="DureeIntervention" step="0.1" required />
     </div>
 
     <div class="form-group">
-        <label for="CoutTotal">Coût Total</label>
-        <input type="number" class="form-control" id="CoutTotal" name="CoutTotal" required />
-    </div>
-
-    <div class="form-group">
-        <label>Pièces utilisées (si nécessaire)</label>
+        <label for="NecessitePieces">Pièces nécessaires</label>
         <div>
             <input type="checkbox" name="NecessitePieces" id="NecessitePieces" value="true" />
             <label for="NecessitePieces">Oui, pièces nécessaires</label>
         </div>
-        <div id="piecesContainer" style="display:none;">
-            <!-- Dynamically add pieces here -->
-        </div>
     </div>
+
+    <div id="piecesContainer" style="display:none;">
+        <h4>Choisir les pièces utilisées :</h4>
+        @foreach (var piece in Model.AvailablePieces)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Pieces[@piece.Value].Nom" value="@piece.Text" />
+                <label class="form-check-label" for="Pieces[@piece.Value].Nom">@piece.Text</label>
+               
+            </div>
+        }
+    </div>
+
 
     <button type="submit" class="btn btn-primary">Ajouter l'intervention</button>
 </form>
 
-<script>
-    document.getElementById("NecessitePieces").addEventListener("change", function () {
-        const piecesContainer = document.getElementById("piecesContainer");
-        piecesContainer.style.display = this.checked ? "block" : "none";
-    });
-</script>
+@section Scripts {
+    <script src="~/js/intervention.js"></script>
+
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/e3NazJfNdmrZii7/z0FaLFBcabZGIlEP9Wx4AUnrsg=",
+  "Hash": "yQOsiTD8/Zuao/A0UvZOZNfL+jS/wMafEXm9XgcOukk=",
   "Source": "Atelier_2",
   "BasePath": "_content/Atelier_2",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\CustomScript.js"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\intervention.js",
+      "SourceId": "Atelier_2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\",
+      "BasePath": "_content/Atelier_2",
+      "RelativePath": "js/intervention.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\intervention.js"
     },
     {
       "Identity": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\site.js",

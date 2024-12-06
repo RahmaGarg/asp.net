@@ -3,56 +3,148 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\reclamation\\traiterreclamation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\reclamation\\traiterreclamation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\controllers\\interventioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:controllers\\interventioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\intervention\\ajouterintervention.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\intervention\\ajouterintervention.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\controllers\\interventioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:controllers\\interventioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\wwwroot\\js\\intervention.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:wwwroot\\js\\intervention.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\controllers\\reclamationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:controllers\\reclamationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\reclamationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\reclamationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\intervention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\intervention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\services\\reclamationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:services\\reclamationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\controllers\\piececontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:controllers\\piececontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\reclamation\\ajouterreclamation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\reclamation\\ajouterreclamation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\ajouterinterventionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\ajouterinterventionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\reclamation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\reclamation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\wwwroot\\js\\customscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:wwwroot\\js\\customscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\piece\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\piece\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\piece\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\piece\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\piece\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\piece\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\piece\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\piece\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\piece\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\piece\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\controllers\\piececontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:controllers\\piececontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\editpieceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\editpieceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\editviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\editviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\createpieceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\createpieceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\createviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\createviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241206165020_piecead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241206165020_piecead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\services\\reclamationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:services\\reclamationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\repositories\\sqlpiecerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\repositories\\sqlpiecerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\repositories\\sqlproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\repositories\\sqlproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241206160139_technicien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241206160139_technicien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\migrations\\20241206155154_technicienajoute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:migrations\\20241206155154_technicienajoute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\reclamation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\reclamation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\reclamation\\traiterreclamation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\reclamation\\traiterreclamation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\reclamationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\reclamationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\reclamation\\ajouterreclamation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\reclamation\\ajouterreclamation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\migrations\\20241201185153_piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,24 +163,8 @@
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\reclamation\\mesreclamations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\reclamation\\mesreclamations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\migrations\\20241127191941_clientadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,20 +187,8 @@
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\repositories\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\repositories\\sqlproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\repositories\\sqlproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\repositories\\iclientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\repositories\\iclientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\editviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\editviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\admin\\createrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -145,10 +209,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\userroleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\userroleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\wwwroot\\js\\customscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:wwwroot\\js\\customscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\admin\\editrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -173,10 +233,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\createroleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\createroleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\migrations\\20241127200713_rolesadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -229,14 +285,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\viewmodels\\createviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:viewmodels\\createviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\models\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|solutionrelative:models\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{822656E2-6B17-4338-A30B-944AE7C49A30}|Atelier_2.csproj|c:\\users\\asus\\source\\repos\\atelier_2\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -300,35 +348,35 @@
               "RelativeDocumentMoniker": "Views\\Intervention\\AjouterIntervention.cshtml",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Intervention\\AjouterIntervention.cshtml",
               "RelativeToolTip": "Views\\Intervention\\AjouterIntervention.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAuwCgAAAAAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-01T20:55:38.643Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InterventionController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\InterventionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\InterventionController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\InterventionController.cs",
-              "RelativeToolTip": "Controllers\\InterventionController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAAwEsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:20:17.188Z",
+              "DocumentIndex": 7,
+              "Title": "CustomScript.js",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\CustomScript.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\CustomScript.js",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\CustomScript.js",
+              "RelativeToolTip": "wwwroot\\js\\CustomScript.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-28T22:30:24.908Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TraiterReclamation.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Reclamation\\TraiterReclamation.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reclamation\\TraiterReclamation.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Reclamation\\TraiterReclamation.cshtml",
-              "RelativeToolTip": "Views\\Reclamation\\TraiterReclamation.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-01T15:35:40.974Z",
+              "Title": "InterventionController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\InterventionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InterventionController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\InterventionController.cs",
+              "RelativeToolTip": "Controllers\\InterventionController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAwG8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T15:20:17.188Z",
               "EditorCaption": ""
             },
             {
@@ -339,7 +387,7 @@
               "RelativeDocumentMoniker": "Models\\Intervention.cs",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Intervention.cs",
               "RelativeToolTip": "Models\\Intervention.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABMAAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T15:09:34.747Z",
               "EditorCaption": ""
@@ -347,19 +395,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ReclamationViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\ReclamationViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ReclamationViewModel.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\ReclamationViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ReclamationViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T14:07:03.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "ReclamationController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\ReclamationController.cs",
               "RelativeDocumentMoniker": "Controllers\\ReclamationController.cs",
@@ -372,46 +407,395 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ReclamationService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Services\\ReclamationService.cs",
-              "RelativeDocumentMoniker": "Services\\ReclamationService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Services\\ReclamationService.cs",
-              "RelativeToolTip": "Services\\ReclamationService.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAAwEgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:04:25.603Z",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-04T10:05:27.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PieceController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\PieceController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PieceController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\PieceController.cs",
-              "RelativeToolTip": "Controllers\\PieceController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAAwFEAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "intervention.js",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\intervention.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\intervention.js",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\intervention.js",
+              "RelativeToolTip": "wwwroot\\js\\intervention.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-06T17:21:47.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AjouterInterventionViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\AjouterInterventionViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AjouterInterventionViewModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\AjouterInterventionViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AjouterInterventionViewModel.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAwA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:20:53.572Z",
+              "WhenOpened": "2024-12-01T18:40:08.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAAwGAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-27T19:33:05.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Piece\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Piece\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Piece\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Piece\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T16:55:53.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Piece\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Piece\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Piece\\Index.cshtml",
+              "RelativeToolTip": "Views\\Piece\\Index.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T16:59:44.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Piece\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Piece\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Piece\\Details.cshtml",
+              "RelativeToolTip": "Views\\Piece\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T16:59:59.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Piece\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Piece\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Piece\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Piece\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T17:00:36.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Piece\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Piece\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Piece\\Create.cshtml",
+              "RelativeToolTip": "Views\\Piece\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T17:00:17.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:04:57.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PieceController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\PieceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PieceController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\PieceController.cs",
+              "RelativeToolTip": "Controllers\\PieceController.cs",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAAAHkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T16:51:02.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EditPieceViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\EditPieceViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\EditPieceViewModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\EditPieceViewModel.cs",
+              "RelativeToolTip": "ViewModels\\EditPieceViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T16:58:33.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CreatePieceViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\CreatePieceViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\CreatePieceViewModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\CreatePieceViewModel.cs",
+              "RelativeToolTip": "ViewModels\\CreatePieceViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T16:51:56.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20241206165020_piecead.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241206165020_piecead.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241206165020_piecead.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241206165020_piecead.cs",
+              "RelativeToolTip": "Migrations\\20241206165020_piecead.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T16:50:20.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Piece.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Piece.cs",
+              "RelativeDocumentMoniker": "Models\\Piece.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Piece.cs",
+              "RelativeToolTip": "Models\\Piece.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T15:10:00.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SqlPieceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\SqlPieceRepository.cs",
+              "RelativeDocumentMoniker": "Models\\Repositories\\SqlPieceRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\SqlPieceRepository.cs",
+              "RelativeToolTip": "Models\\Repositories\\SqlPieceRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T16:35:01.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAAwJwAAAAAAAAA",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAAwH8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T10:19:14.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
+              "Title": "EditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\EditViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\EditViewModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\EditViewModel.cs",
+              "RelativeToolTip": "ViewModels\\EditViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T10:18:46.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SqlProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\SqlProductRepository.cs",
+              "RelativeDocumentMoniker": "Models\\Repositories\\SqlProductRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\SqlProductRepository.cs",
+              "RelativeToolTip": "Models\\Repositories\\SqlProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:09:24.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CreateViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\CreateViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\CreateViewModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\CreateViewModel.cs",
+              "RelativeToolTip": "ViewModels\\CreateViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:30:35.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "Context\\AppDbContext.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAwBsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:04:28.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ReclamationService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Services\\ReclamationService.cs",
+              "RelativeDocumentMoniker": "Services\\ReclamationService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Services\\ReclamationService.cs",
+              "RelativeToolTip": "Services\\ReclamationService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAjwCwAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T15:04:25.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:02:42.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20241206160139_technicien.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241206160139_technicien.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241206160139_technicien.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241206160139_technicien.cs",
+              "RelativeToolTip": "Migrations\\20241206160139_technicien.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T16:01:39.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20241206155154_technicienajoute.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241206155154_technicienajoute.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241206155154_technicienajoute.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241206155154_technicienajoute.cs",
+              "RelativeToolTip": "Migrations\\20241206155154_technicienajoute.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T15:51:55.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\IRepository.cs",
+              "RelativeDocumentMoniker": "Models\\Repositories\\IRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\IRepository.cs",
+              "RelativeToolTip": "Models\\Repositories\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:07:23.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Reclamation.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Reclamation.cs",
+              "RelativeDocumentMoniker": "Models\\Reclamation.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Reclamation.cs",
+              "RelativeToolTip": "Models\\Reclamation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T14:05:26.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AQIAAMEAAAAAAAAAAAAAwOcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T22:11:19.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ReclamationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\ReclamationViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ReclamationViewModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\ReclamationViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ReclamationViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T14:07:03.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TraiterReclamation.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Reclamation\\TraiterReclamation.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reclamation\\TraiterReclamation.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Reclamation\\TraiterReclamation.cshtml",
+              "RelativeToolTip": "Views\\Reclamation\\TraiterReclamation.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-01T15:35:40.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
               "Title": "AjouterReclamation.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Reclamation\\AjouterReclamation.cshtml",
               "RelativeDocumentMoniker": "Views\\Reclamation\\AjouterReclamation.cshtml",
@@ -423,31 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Reclamation.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Reclamation.cs",
-              "RelativeDocumentMoniker": "Models\\Reclamation.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Reclamation.cs",
-              "RelativeToolTip": "Models\\Reclamation.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T14:05:26.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AjouterInterventionViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\AjouterInterventionViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\AjouterInterventionViewModel.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\AjouterInterventionViewModel.cs",
-              "RelativeToolTip": "ViewModels\\AjouterInterventionViewModel.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAACIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T18:40:08.45Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 81,
               "Title": "20241201190806_piece2.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241201190806_piece2.cs",
               "RelativeDocumentMoniker": "Migrations\\20241201190806_piece2.cs",
@@ -459,19 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Piece.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Piece.cs",
-              "RelativeDocumentMoniker": "Models\\Piece.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Piece.cs",
-              "RelativeToolTip": "Models\\Piece.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:10:00.196Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 36,
               "Title": "20241201185153_piece.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241201185153_piece.cs",
               "RelativeDocumentMoniker": "Migrations\\20241201185153_piece.cs",
@@ -483,7 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 37,
               "Title": "All.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Reclamation\\All.cshtml",
               "RelativeDocumentMoniker": "Views\\Reclamation\\All.cshtml",
@@ -495,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 38,
               "Title": "EtatReclamation.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\EtatReclamation.cs",
               "RelativeDocumentMoniker": "Models\\EtatReclamation.cs",
@@ -507,7 +855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 39,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -519,19 +867,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAwEgAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T19:33:05.426Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 79,
               "Title": "20241201151456_interven.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241201151456_interven.cs",
               "RelativeDocumentMoniker": "Migrations\\20241201151456_interven.cs",
@@ -543,19 +879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "Context\\AppDbContext.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABgAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T10:04:28.449Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 40,
               "Title": "MesReclamations.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Reclamation\\MesReclamations.cshtml",
               "RelativeDocumentMoniker": "Views\\Reclamation\\MesReclamations.cshtml",
@@ -567,31 +891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Product.cs",
-              "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T10:02:42.532Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AQIAAMEAAAAAAAAAAAAAwOcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T22:11:19.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 80,
               "Title": "20241201144410_EtatReclam.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241201144410_EtatReclam.cs",
               "RelativeDocumentMoniker": "Migrations\\20241201144410_EtatReclam.cs",
@@ -603,7 +903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 41,
               "Title": "20241127191941_clientadded.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241127191941_clientadded.cs",
               "RelativeDocumentMoniker": "Migrations\\20241127191941_clientadded.cs",
@@ -615,7 +915,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 42,
               "Title": "ClientController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\ClientController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClientController.cs",
@@ -627,7 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 43,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -639,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 77,
               "Title": "20241130143817_ajoutreclamation2.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241130143817_ajoutreclamation2.cs",
               "RelativeDocumentMoniker": "Migrations\\20241130143817_ajoutreclamation2.cs",
@@ -651,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 78,
               "Title": "20241130141500_ajoutreclamation.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241130141500_ajoutreclamation.cs",
               "RelativeDocumentMoniker": "Migrations\\20241130141500_ajoutreclamation.cs",
@@ -663,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 45,
               "Title": "ClientRepository.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\ClientRepository.cs",
               "RelativeDocumentMoniker": "Models\\Repositories\\ClientRepository.cs",
@@ -675,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 44,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Client.cs",
               "RelativeDocumentMoniker": "Models\\Client.cs",
@@ -687,19 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "SqlProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\SqlProductRepository.cs",
-              "RelativeDocumentMoniker": "Models\\Repositories\\SqlProductRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\SqlProductRepository.cs",
-              "RelativeToolTip": "Models\\Repositories\\SqlProductRepository.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAC0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T10:09:24.765Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 46,
               "Title": "IClientRepository.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\IClientRepository.cs",
               "RelativeDocumentMoniker": "Models\\Repositories\\IClientRepository.cs",
@@ -711,31 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "EditViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\EditViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\EditViewModel.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\EditViewModel.cs",
-              "RelativeToolTip": "ViewModels\\EditViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T10:18:46.014Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-04T10:05:27.091Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 47,
               "Title": "CreateRole.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Admin\\CreateRole.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\CreateRole.cshtml",
@@ -747,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 48,
               "Title": "ListRoles.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Admin\\ListRoles.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\ListRoles.cshtml",
@@ -759,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 53,
               "Title": "EditRoleViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\EditRoleViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\EditRoleViewModel.cs",
@@ -771,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 54,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
@@ -783,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 51,
               "Title": "UserRoleViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\UserRoleViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\UserRoleViewModel.cs",
@@ -795,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 50,
               "Title": "EditUsersInRole.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Admin\\EditUsersInRole.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\EditUsersInRole.cshtml",
@@ -807,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 49,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Account\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\AccessDenied.cshtml",
@@ -819,19 +1083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "CustomScript.js",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\CustomScript.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\CustomScript.js",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\CustomScript.js",
-              "RelativeToolTip": "wwwroot\\js\\CustomScript.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-28T22:30:24.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 52,
               "Title": "EditRole.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Admin\\EditRole.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\EditRole.cshtml",
@@ -843,7 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 55,
               "Title": "DeleteRole.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Admin\\DeleteRole.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\DeleteRole.cshtml",
@@ -855,7 +1107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 60,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
@@ -867,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 56,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
@@ -879,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 57,
               "Title": "CreateRoleViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\CreateRoleViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\CreateRoleViewModel.cs",
@@ -891,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 59,
               "Title": "20241127200651_rolesadded.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241127200651_rolesadded.cs",
               "RelativeDocumentMoniker": "Migrations\\20241127200651_rolesadded.cs",
@@ -903,19 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAwwC4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T10:04:57.721Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 58,
               "Title": "20241127200713_rolesadded.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241127200713_rolesadded.cs",
               "RelativeDocumentMoniker": "Migrations\\20241127200713_rolesadded.cs",
@@ -927,7 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 61,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Client\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Client\\Details.cshtml",
@@ -939,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 62,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Client\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Client\\Delete.cshtml",
@@ -951,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 65,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Client\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Client\\Index.cshtml",
@@ -963,7 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 64,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Client\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Client\\Create.cshtml",
@@ -975,7 +1215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 63,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Client\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Client\\Edit.cshtml",
@@ -987,19 +1227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\IRepository.cs",
-              "RelativeDocumentMoniker": "Models\\Repositories\\IRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Models\\Repositories\\IRepository.cs",
-              "RelativeToolTip": "Models\\Repositories\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T10:07:23.983Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 69,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Product\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Product\\Create.cshtml",
@@ -1011,7 +1239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 68,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Product\\Index.cshtml",
@@ -1023,7 +1251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 67,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Product\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Product\\Details.cshtml",
@@ -1035,7 +1263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 66,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Product\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Product\\Edit.cshtml",
@@ -1047,7 +1275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 70,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Product\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Product\\Delete.cshtml",
@@ -1059,7 +1287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 76,
               "Title": "20241127184844_newone.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241127184844_newone.cs",
               "RelativeDocumentMoniker": "Migrations\\20241127184844_newone.cs",
@@ -1071,19 +1299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "CreateViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\CreateViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\CreateViewModel.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\ViewModels\\CreateViewModel.cs",
-              "RelativeToolTip": "ViewModels\\CreateViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T10:30:35.35Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 71,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\AppDbContextModelSnapshot.cs",
@@ -1095,7 +1311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 72,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -1107,7 +1323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 75,
               "Title": "20241004102922_AddPhotoPathToProducts.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241004102922_AddPhotoPathToProducts.cs",
               "RelativeDocumentMoniker": "Migrations\\20241004102922_AddPhotoPathToProducts.cs",
@@ -1119,7 +1335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 73,
               "Title": "Atelier_2.csproj",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Atelier_2.csproj",
               "RelativeDocumentMoniker": "Atelier_2.csproj",
@@ -1131,7 +1347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 74,
               "Title": "20241004101450_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\Migrations\\20241004101450_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20241004101450_InitialCreate.cs",

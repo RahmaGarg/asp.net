@@ -1,81 +1,152 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Atelier_2.Models;
-using Atelier_2.Context;
+﻿using Atelier_2.Models;
+using Atelier_2.Models.Repositories;
 using Atelier_2.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting.Internal;
+using System.IO;
+using System.Linq;
 
 namespace Atelier_2.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PieceController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IRepository<Piece> pieceRepository;
+        private readonly IWebHostEnvironment hostingEnvironment;
 
-        public PieceController(AppDbContext context)
+        // Constructor for dependency injection
+        public PieceController(IRepository<Piece> pieceRepository, IWebHostEnvironment hostingEnvironment)
         {
-            _context = context;
+            this.hostingEnvironment = hostingEnvironment;
+            this.pieceRepository = pieceRepository;
         }
 
-        // Action GET pour afficher le formulaire d'ajout d'une intervention et des pièces
-        public IActionResult AjouterIntervention()
+        // GET: PieceController
+        public ActionResult Index()
         {
-            var model = new AjouterInterventionViewModel
+            var pieces = pieceRepository.GetAll();
+            return View(pieces);  // Pass the pieces to the view
+        }
+
+        // GET: PieceController/Details/5
+        public ActionResult Details(int id)
+        {
+            // Fetch the piece from the repository using the provided id
+            var piece = pieceRepository.Get(id);
+
+            // Check if the piece exists
+            if (piece == null)
             {
-                // Initialisation du ViewModel
-                NecessitePieces = false, // Par défaut, l'intervention n'a pas besoin de pièces
-                Pieces = new List<PieceViewModel>() // Liste vide de pièces
-            };
+                return NotFound(); // Return a 404 Not Found response if piece not found
+            }
 
-            return View(model);
+            // Pass the piece to the view
+            return View(piece);
         }
 
-        // Action POST pour ajouter l'intervention avec des pièces
+        // GET: PieceController/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: PieceController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AjouterIntervention(AjouterInterventionViewModel model)
+        public ActionResult Create(CreatePieceViewModel model)
         {
             if (ModelState.IsValid)
             {
-                // Créer l'entité Intervention
-                var intervention = new Intervention
+                Piece newPiece = new Piece
                 {
-                    ReclamationId = model.ReclamationId,
-                    NecessitePieces = model.NecessitePieces,
-                    DureeIntervention = model.DureeIntervention,
-                    CoutTotal = model.CoutTotal,
-                    DateIntervention = model.DateIntervention
+                    Nom = model.Nom,
+                    Prix = model.Prix
                 };
 
-                // Si des pièces sont nécessaires, on ajoute ces pièces à l'intervention
-                if (model.NecessitePieces && model.Pieces.Any())
-                {
-                    var pieces = model.Pieces.Select(p => new Piece
-                    {
-                        Nom = p.Nom,
-                        Prix = p.Prix,
-                    }).ToList();
-
-                    intervention.PiecesUtilisees = pieces;
-                }
-
-                // Ajouter l'intervention dans la base de données
-                _context.Interventions.Add(intervention);
-                await _context.SaveChangesAsync();
-
-                // Rediriger vers la page de gestion des interventions
-                return RedirectToAction("ManageInterventions");
+                // Add the new piece to the repository
+                pieceRepository.Add(newPiece);
+                return RedirectToAction("Details", new { id = newPiece.Id });  // Redirect to Details after creation
             }
-
-            // Si le modèle est invalide, retourner à la vue avec les données nécessaires
-            return View(model);
+            return View(model);  // Return to create view if validation fails
         }
 
-        // Action GET pour afficher la liste des interventions
-        public IActionResult ManageInterventions()
+        // GET: PieceController/Edit/5
+        public ActionResult Edit(int id)
         {
-            var interventions = _context.Interventions.ToList();
-            return View(interventions);
+            Piece piece = pieceRepository.Get(id);
+            if (piece == null)
+            {
+                return NotFound();  // Handle case when piece does not exist
+            }
+
+            // Create EditPieceViewModel populated with existing piece data
+            EditPieceViewModel pieceEditViewModel = new EditPieceViewModel
+            {
+                Id = piece.Id,
+                Nom = piece.Nom,
+                Prix = piece.Prix
+            };
+
+            return View(pieceEditViewModel);  // Pass EditPieceViewModel to the view
+        }
+
+        // POST: PieceController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(EditPieceViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Retrieve the piece being edited from the repository
+                Piece piece = pieceRepository.Get(model.Id);
+                if (piece == null)
+                {
+                    return NotFound();  // Handle case when piece is not found
+                }
+
+                // Update piece object with the new data
+                piece.Nom = model.Nom;
+                piece.Prix = model.Prix;
+
+                // Update the piece in the repository
+                Piece updatedPiece = pieceRepository.Update(piece);
+                if (updatedPiece != null)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            return View(model);  // Return to the edit view if validation fails
+        }
+
+        // GET: PieceController/Delete/5
+        public ActionResult Delete(int id)
+        {
+            Piece piece = pieceRepository.Get(id);
+            if (piece == null)
+            {
+                return NotFound();  // Handle case when piece does not exist
+            }
+
+            return View(piece);  // Pass piece to the view for confirmation
+        }
+
+        // POST: PieceController/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id, IFormCollection collection)
+        {
+            Piece piece = pieceRepository.Delete(id);
+            if (piece != null)
+            {
+                return RedirectToAction(nameof(Index));  // Redirect to index after successful deletion
+            }
+            return NotFound();  // If the piece does not exist, return NotFound
         }
     }
 }

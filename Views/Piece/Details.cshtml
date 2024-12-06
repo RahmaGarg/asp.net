@@ -1,0 +1,15 @@
+﻿@model Atelier_2.Models.Piece
+
+@{
+    ViewData["Title"] = "Piece Details";
+}
+
+<h1>Piece Details</h1>
+
+<div>
+    <h3>@Model.Nom</h3>
+    <p><strong>Price: </strong>@Model.Prix</p>
+</div>
+
+<a href="@Url.Action("Edit", new { id = Model.Id })" class="btn btn-primary">Edit</a>
+<a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>

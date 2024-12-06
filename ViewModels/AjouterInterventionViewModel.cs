@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -9,6 +10,8 @@ namespace Atelier_2.ViewModels
         public int ReclamationId { get; set; } // ID de la réclamation associée
 
         public bool NecessitePieces { get; set; } // Si des pièces sont nécessaires
+        public List<SelectListItem> AvailablePieces { get; set; }
+
 
         // Liste des pièces à ajouter à l'intervention
         public List<PieceViewModel> Pieces { get; set; } = new List<PieceViewModel>();
@@ -21,6 +24,11 @@ namespace Atelier_2.ViewModels
 
         [Required]
         public DateTime DateIntervention { get; set; } // Date de l'intervention
+                                                       // Liste des techniciens pour la liste déroulante
+        public List<SelectListItem> Techniciens { get; set; }
+
+        // ID du technicien sélectionné
+        public string TechnicienId { get; set; }
     }
 
     public class PieceViewModel
