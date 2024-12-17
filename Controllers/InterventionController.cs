@@ -40,11 +40,13 @@ namespace Atelier_2.Controllers
             var techniciens = await _userManager.GetUsersInRoleAsync("Technicien");
 
             // Exemple de pièces disponibles, à remplacer par des données réelles de votre base
-            var availablePieces = _context.Pieces.Select(p => new SelectListItem
-            {
-                Value = p.Id.ToString(),
-                Text = p.Nom
-            }).ToList();
+            var availablePieces = await _context.Pieces
+                .Select(p => new SelectListItem
+                {
+                    Value = p.Id.ToString(),
+                    Text = p.Nom
+                })
+                .ToListAsync();
 
             // Créer un modèle pour l'ajout d'intervention
             var model = new AjouterInterventionViewModel
@@ -112,8 +114,8 @@ namespace Atelier_2.Controllers
                 _context.Interventions.Add(intervention);
                 await _context.SaveChangesAsync();
 
-                // Rediriger vers la page de gestion des interventions
-                return RedirectToAction("ManageInterventions");
+                // Rediriger vers la vue qui affiche l'intervention
+                return RedirectToAction("AfficherIntervention", new { id = intervention.Id });
             }
 
             // Si le modèle est invalide, retourner à la vue avec les données nécessaires
@@ -124,7 +126,32 @@ namespace Atelier_2.Controllers
                 Text = t.UserName
             }).ToList();
 
+            // Recharger la liste des pièces disponibles
+            model.AvailablePieces = await _context.Pieces
+                .Select(p => new SelectListItem
+                {
+                    Value = p.Id.ToString(),
+                    Text = p.Nom
+                })
+                .ToListAsync();
+
             return View(model);
         }
+
+        // Action pour afficher l'intervention ajoutée
+        public async Task<IActionResult> AfficherIntervention(int id)
+        {
+            var intervention = await _context.Interventions
+                .Include(i => i.PiecesUtilisees)
+                .FirstOrDefaultAsync(i => i.Id == id);
+
+            if (intervention == null)
+            {
+                return NotFound(); // Si l'intervention n'est pas trouvée
+            }
+
+            return View(intervention);
+        }
+
     }
 }

@@ -1,0 +1,35 @@
+﻿@model Atelier_2.Models.Intervention
+
+<h2>Détails de l'intervention</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Intervention #@Model.Id</h5>
+
+        <p><strong>Date d'intervention :</strong> @Model.DateIntervention.ToString("dd/MM/yyyy")</p>
+        <p><strong>Durée d'intervention :</strong> @Model.DureeIntervention heures</p>
+        <p><strong>Technicien Assigné :</strong> @Model.Technicien.UserName</p>
+
+        @if (Model.NecessitePieces)
+        {
+            <h6>Pièces utilisées :</h6>
+            @if (Model.PiecesUtilisees != null && Model.PiecesUtilisees.Any())
+            {
+                <ul>
+                    @foreach (var piece in Model.PiecesUtilisees)
+                    {
+                        <li>@piece.Nom - @piece.Prix €</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>Aucune pièce utilisée.</p>
+            }
+        }
+
+        <p><strong>Coût total :</strong> @Model.CoutTotal €</p>
+    </div>
+</div>
+
+<a href="@Url.Action("ManageInterventions")" class="btn btn-primary">Retour aux interventions</a>

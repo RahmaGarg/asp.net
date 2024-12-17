@@ -10,22 +10,15 @@
         piecesContainer.style.display = checkbox.checked ? "block" : "none";
     });
 
-    // Calculer le coût total dès que la durée de l'intervention ou les pièces sont modifiées
-    const dureeIntervention = document.getElementById("DureeIntervention");
-    const coutTotalInput = document.getElementById("CoutTotal");
+    // Ajoutez un écouteur d'événements pour chaque case à cocher de pièce
+    const pieceCheckboxes = document.querySelectorAll("input[name^='Pieces']");
+    pieceCheckboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", function () {
+            const pieceId = checkbox.id.split('_')[1]; // Récupérer l'ID de la pièce
+            const quantityContainer = document.getElementById(`quantityContainer_${pieceId}`);
 
-    dureeIntervention.addEventListener("input", function () {
-        const duree = parseFloat(dureeIntervention.value) || 0;
-        let coutTotal = duree * tarifHoraire; // tarifHoraire doit être défini dans la vue ou dans le script
-
-        // Ajouter le coût des pièces
-        const selectedPieces = document.querySelectorAll("input[name^='Pieces']:checked");
-        selectedPieces.forEach(function (piece) {
-            const prix = parseFloat(piece.closest('.form-check').querySelector("input[name^='Pieces'][name$='.Prix']").value) || 0;
-            coutTotal += prix;
+            // Afficher ou cacher le champ de quantité en fonction de l'état de la case
+            quantityContainer.style.display = checkbox.checked ? "block" : "none";
         });
-
-        // Mettre à jour le champ de coût total
-        coutTotalInput.value = coutTotal.toFixed(2);
     });
 });

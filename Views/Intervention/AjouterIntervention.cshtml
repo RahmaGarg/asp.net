@@ -34,21 +34,36 @@
 
     <div id="piecesContainer" style="display:none;">
         <h4>Choisir les pièces utilisées :</h4>
-        @foreach (var piece in Model.AvailablePieces)
+        @if (Model.AvailablePieces != null && Model.AvailablePieces.Any())
         {
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="Pieces[@piece.Value].Nom" value="@piece.Text" />
-                <label class="form-check-label" for="Pieces[@piece.Value].Nom">@piece.Text</label>
-               
-            </div>
+            @foreach (var piece in Model.AvailablePieces)
+            {
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Pieces[@piece.Value].Nom" value="@piece.Text" id="Piece_@piece.Value" />
+                    <label class="form-check-label" for="Piece_@piece.Value">@piece.Text</label>
+
+                    <!-- Conteneur pour la quantité, caché par défaut -->
+                    <div id="quantityContainer_@piece.Value" style="display:none;">
+                        <label for="Quantity_@piece.Value">Quantité :</label>
+                        <input type="number" id="Quantity_@piece.Value" name="Pieces[@piece.Value].Quantity" class="form-control" min="1" value="1" />
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>Aucune pièce disponible</p>
         }
     </div>
 
+    <div class="form-group">
+        <label for="CoutTotal">Coût Total</label>
+        <input type="number" class="form-control" id="CoutTotal" name="CoutTotal" readonly />
+    </div>
 
     <button type="submit" class="btn btn-primary">Ajouter l'intervention</button>
 </form>
 
 @section Scripts {
     <script src="~/js/intervention.js"></script>
-
 }
