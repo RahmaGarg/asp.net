@@ -1,23 +1,23 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
-    const checkbox = document.getElementById("NecessitePieces");
+    // Gestion de la visibilité des pièces et des quantités
+    const checkboxNecessitePieces = document.getElementById("NecessitePieces");
     const piecesContainer = document.getElementById("piecesContainer");
 
-    // Vérifiez si la case est déjà cochée au chargement
-    piecesContainer.style.display = checkbox.checked ? "block" : "none";
+    // Affiche/Masque les pièces en fonction de la case "NecessitePieces"
+    piecesContainer.style.display = checkboxNecessitePieces.checked ? "block" : "none";
 
-    // Ajoutez un écouteur d'événement pour le changement de l'état de la case
-    checkbox.addEventListener("change", function () {
-        piecesContainer.style.display = checkbox.checked ? "block" : "none";
+    checkboxNecessitePieces.addEventListener("change", function () {
+        piecesContainer.style.display = checkboxNecessitePieces.checked ? "block" : "none";
     });
 
-    // Ajoutez un écouteur d'événements pour chaque case à cocher de pièce
+    // Gérer l'affichage de la quantité lorsque la case d'une pièce est cochée/décochée
     const pieceCheckboxes = document.querySelectorAll("input[name^='Pieces']");
     pieceCheckboxes.forEach(function (checkbox) {
         checkbox.addEventListener("change", function () {
-            const pieceId = checkbox.id.split('_')[1]; // Récupérer l'ID de la pièce
+            const pieceId = checkbox.id.split('_')[1]; // ID de la pièce
             const quantityContainer = document.getElementById(`quantityContainer_${pieceId}`);
 
-            // Afficher ou cacher le champ de quantité en fonction de l'état de la case
+            // Affiche/Masque le champ de quantité
             quantityContainer.style.display = checkbox.checked ? "block" : "none";
         });
     });

@@ -34,25 +34,21 @@
 
     <div id="piecesContainer" style="display:none;">
         <h4>Choisir les pièces utilisées :</h4>
-        @if (Model.AvailablePieces != null && Model.AvailablePieces.Any())
+        @foreach (var piece in Model.Pieces)
         {
-            @foreach (var piece in Model.AvailablePieces)
-            {
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="Pieces[@piece.Value].Nom" value="@piece.Text" id="Piece_@piece.Value" />
-                    <label class="form-check-label" for="Piece_@piece.Value">@piece.Text</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Pieces[@piece.PieceId].IsChecked" value="true" id="Piece_@piece.PieceId" />
+                <label class="form-check-label" for="Piece_@piece.PieceId">@piece.Nom</label>
 
-                    <!-- Conteneur pour la quantité, caché par défaut -->
-                    <div id="quantityContainer_@piece.Value" style="display:none;">
-                        <label for="Quantity_@piece.Value">Quantité :</label>
-                        <input type="number" id="Quantity_@piece.Value" name="Pieces[@piece.Value].Quantity" class="form-control" min="1" value="1" />
-                    </div>
+                <!-- Champ caché pour gérer l'état de la case -->
+                <input type="hidden" name="Pieces[@piece.PieceId].IsChecked" value="false" />
+
+                <!-- Quantité (affichée si la case est cochée) -->
+                <div id="quantityContainer_@piece.PieceId" style="display:none;">
+                    <label for="Quantity_@piece.PieceId">Quantité :</label>
+                    <input type="number" id="Quantity_@piece.PieceId" name="Pieces[@piece.PieceId].Quantity" class="form-control" min="1" value="1" />
                 </div>
-            }
-        }
-        else
-        {
-            <p>Aucune pièce disponible</p>
+            </div>
         }
     </div>
 
@@ -63,6 +59,11 @@
 
     <button type="submit" class="btn btn-primary">Ajouter l'intervention</button>
 </form>
+
+@foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+{
+    <div class="alert alert-danger">@error.ErrorMessage</div>
+}
 
 @section Scripts {
     <script src="~/js/intervention.js"></script>

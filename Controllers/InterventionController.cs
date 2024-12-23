@@ -17,7 +17,6 @@ namespace Atelier_2.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IConfiguration _configuration;
 
-        // Injection de AppDbContext, UserManager et IConfiguration dans le constructeur
         public InterventionController(AppDbContext context, UserManager<IdentityUser> userManager, IConfiguration configuration)
         {
             _context = context;
@@ -25,40 +24,42 @@ namespace Atelier_2.Controllers
             _configuration = configuration;
         }
 
+        // Action GET pour afficher le formulaire d'ajout d'intervention
         public async Task<IActionResult> AjouterIntervention(int reclamationId)
         {
-            // Récupérer la réclamation associée à cet ID
+            Console.WriteLine($"Début de l'action GET AjouterIntervention pour la réclamation ID: {reclamationId}");
+
             var reclamation = await _context.Reclamations
                 .FirstOrDefaultAsync(r => r.Id == reclamationId);
 
             if (reclamation == null)
             {
-                return NotFound(); // Si la réclamation n'existe pas
+                Console.WriteLine($"Réclamation avec ID {reclamationId} non trouvée.");
+                return NotFound();
             }
 
-            // Récupérer tous les utilisateurs ayant le rôle "Technicien"
             var techniciens = await _userManager.GetUsersInRoleAsync("Technicien");
 
-            // Exemple de pièces disponibles, à remplacer par des données réelles de votre base
             var availablePieces = await _context.Pieces
-                .Select(p => new SelectListItem
+                .Select(p => new PieceSelectionViewModel
                 {
-                    Value = p.Id.ToString(),
-                    Text = p.Nom
+                    PieceId = p.Id,
+                    Nom = p.Nom,
+                    IsChecked = false,  // Par défaut, les pièces ne sont pas sélectionnées
+                    Quantity = 1        // Par défaut, la quantité est 1
                 })
                 .ToListAsync();
 
-            // Créer un modèle pour l'ajout d'intervention
             var model = new AjouterInterventionViewModel
             {
                 ReclamationId = reclamationId,
-                DateIntervention = DateTime.Now, // Date par défaut
+                DateIntervention = DateTime.Now,
                 Techniciens = techniciens.Select(t => new SelectListItem
                 {
                     Value = t.Id,
                     Text = t.UserName
-                }).ToList(),
-                AvailablePieces = availablePieces // Remplir la liste des pièces disponibles
+                }).ToList() ?? new List<SelectListItem>(),
+                Pieces = availablePieces ?? new List<PieceSelectionViewModel>()
             };
 
             return View(model);
@@ -69,89 +70,58 @@ namespace Atelier_2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AjouterIntervention(AjouterInterventionViewModel model)
         {
-            if (ModelState.IsValid)
+            Console.WriteLine("Début de l'action POST AjouterIntervention");
+
+            // Vérifie si le modèle est null ou invalide
+            if (model == null)
             {
-                // Récupérer le tarif horaire à partir de la configuration
-                decimal tarifHoraire = decimal.Parse(_configuration["AppSettings:TarifHoraire"]);
-
-                // Calculer le coût de l'intervention basé sur le tarif horaire et la durée de l'intervention
-                decimal coutTechnicien = model.DureeIntervention * tarifHoraire;
-
-                // Calculer le coût des pièces utilisées
-                decimal coutPieces = 0;
-                if (model.NecessitePieces && model.Pieces.Any())
-                {
-                    coutPieces = model.Pieces.Sum(p => p.Prix);
-                }
-
-                // Calculer le coût total de l'intervention
-                decimal coutTotal = coutTechnicien + coutPieces;
-
-                // Créer l'intervention
-                var intervention = new Intervention
-                {
-                    ReclamationId = model.ReclamationId,
-                    DateIntervention = model.DateIntervention,
-                    DureeIntervention = model.DureeIntervention,
-                    CoutTotal = coutTotal, // Coût total calculé
-                    NecessitePieces = model.NecessitePieces,
-                    TechnicienId = model.TechnicienId // Assigner le technicien sélectionné
-                };
-
-                // Si des pièces sont nécessaires et que des pièces ont été sélectionnées, ajouter ces pièces à l'intervention
-                if (model.NecessitePieces && model.Pieces.Any())
-                {
-                    var pieces = model.Pieces.Select(p => new Piece
-                    {
-                        Nom = p.Nom,
-                        Prix = p.Prix
-                    }).ToList();
-
-                    intervention.PiecesUtilisees = pieces;
-                }
-
-                // Ajouter l'intervention dans la base de données
-                _context.Interventions.Add(intervention);
-                await _context.SaveChangesAsync();
-
-                // Rediriger vers la vue qui affiche l'intervention
-                return RedirectToAction("AfficherIntervention", new { id = intervention.Id });
+                Console.WriteLine("Le modèle reçu est null.");
+                ModelState.AddModelError("", "Le modèle est null.");
+                return View(model);
             }
 
-            // Si le modèle est invalide, retourner à la vue avec les données nécessaires
-            var techniciens = await _userManager.GetUsersInRoleAsync("Technicien");
-            model.Techniciens = techniciens.Select(t => new SelectListItem
+            // Vérifie si la propriété Pieces est null ou vide
+            if (model.Pieces == null || !model.Pieces.Any(p => p.IsChecked)) // S'assurer qu'au moins une pièce est sélectionnée
             {
-                Value = t.Id,
-                Text = t.UserName
-            }).ToList();
-
-            // Recharger la liste des pièces disponibles
-            model.AvailablePieces = await _context.Pieces
-                .Select(p => new SelectListItem
-                {
-                    Value = p.Id.ToString(),
-                    Text = p.Nom
-                })
-                .ToListAsync();
-
-            return View(model);
-        }
-
-        // Action pour afficher l'intervention ajoutée
-        public async Task<IActionResult> AfficherIntervention(int id)
-        {
-            var intervention = await _context.Interventions
-                .Include(i => i.PiecesUtilisees)
-                .FirstOrDefaultAsync(i => i.Id == id);
-
-            if (intervention == null)
-            {
-                return NotFound(); // Si l'intervention n'est pas trouvée
+                Console.WriteLine("Aucune pièce sélectionnée.");
+                ModelState.AddModelError("", "Aucune pièce sélectionnée.");
+                return View(model);
             }
 
-            return View(intervention);
+            // Vérifie que les quantités sont valides pour les pièces sélectionnées
+            foreach (var piece in model.Pieces.Where(p => p.IsChecked))
+            {
+                if (piece.Quantity <= 0)
+                {
+                    ModelState.AddModelError("", $"La quantité pour la pièce {piece.Nom} est invalide.");
+                    return View(model);
+                }
+            }
+
+            // Calcul du coût total pour les pièces sélectionnées
+            decimal coutTotal = model.Pieces
+                .Where(p => p.IsChecked)
+                .Sum(p => p.Quantity * p.Prix);
+
+            // Créer l'objet Intervention et le sauvegarder
+            var intervention = new Intervention
+            {
+                ReclamationId = model.ReclamationId,
+                DateIntervention = model.DateIntervention,
+                DureeIntervention = model.DureeIntervention,
+                CoutTotal = coutTotal,
+                NecessitePieces = model.NecessitePieces,
+                TechnicienId = model.TechnicienId
+            };
+
+            // Sauvegarder l'intervention dans la base de données
+            _context.Interventions.Add(intervention);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("AfficherIntervention", new { id = intervention.Id });
         }
+    
 
     }
+
 }
