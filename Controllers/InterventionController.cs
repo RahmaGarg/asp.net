@@ -28,7 +28,7 @@ namespace Atelier_2.Controllers
             // Vérifier si l'intervention existe dans la base de données
             var intervention = await _context.Interventions
                 .Include(i => i.Technicien)  // Inclure le technicien associé
-                .Include(i => i.Reclamation)  // Inclure la réclamation associée (si applicable)
+                .Include(i => i.Reclamation)  // Inclure la réclamation associée
                 .Include(i => i.PiecesUtilisees)  // Inclure les pièces utilisées si nécessaire
                 .FirstOrDefaultAsync(i => i.Id == id);
 
@@ -41,6 +41,7 @@ namespace Atelier_2.Controllers
             // Retourner la vue avec l'intervention
             return View(intervention);
         }
+
 
         // Action GET pour afficher le formulaire d'ajout d'intervention
         public async Task<IActionResult> AjouterIntervention(int reclamationId)
@@ -88,33 +89,30 @@ namespace Atelier_2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AjouterIntervention(AjouterInterventionViewModel model)
         {
-            // Debug: vérifier les valeurs transmises
-            Console.WriteLine($"TechnicienId: {model.TechnicienId}");
-            Console.WriteLine($"ReclamationId: {model.ReclamationId}");
-            Console.WriteLine($"DateIntervention: {model.DateIntervention}");
-            Console.WriteLine($"DureeIntervention: {model.DureeIntervention}");
-            Console.WriteLine($"NecessitePieces: {model.NecessitePieces}");
-            Console.WriteLine($"CoutTotal: {model.CoutTotal}");
-
-            // Récupérer la réclamation pour vérifier que l'ID existe bien dans la base de données
+            // Vérifier la réclamation
             var reclamation = await _context.Reclamations
                 .FirstOrDefaultAsync(r => r.Id == model.ReclamationId);
 
             if (reclamation == null)
             {
                 ModelState.AddModelError("ReclamationId", "La réclamation spécifiée n'existe pas.");
-                return View(model);  // Si la réclamation n'existe pas, on retourne la vue avec l'erreur
+                return View(model);
             }
 
-            // Calcul du coût total pour les pièces sélectionnées
-            decimal coutTotal = model.Pieces
-                .Where(p => p.IsChecked)
-                .Sum(p => p.Quantity * p.Prix);
+            // Calculer le coût total des pièces
+            decimal coutTotal = 0;
+            if (model.Pieces != null)
+            {
+                coutTotal = model.Pieces
+                    .Where(p => p.IsChecked)
+                    .Sum(p => p.Quantity * p.Prix);
+            }
 
-            // Créer l'objet Intervention
+            // Créer une nouvelle intervention
+            // Créer une nouvelle intervention
             var intervention = new Intervention
             {
-                ReclamationId = model.ReclamationId,  // Utiliser l'ID de réclamation du modèle
+                ReclamationId = model.ReclamationId,
                 DateIntervention = model.DateIntervention,
                 DureeIntervention = model.DureeIntervention,
                 NecessitePieces = model.NecessitePieces,
@@ -122,9 +120,19 @@ namespace Atelier_2.Controllers
                 TechnicienId = model.TechnicienId
             };
 
-            // Sauvegarder l'intervention dans la base de données
+            // Ajouter l'intervention à la base de données
             _context.Interventions.Add(intervention);
             await _context.SaveChangesAsync();
+
+            // Associer l'intervention à la réclamation
+            reclamation.InterventionId = intervention.Id;
+
+            // Mettre à jour l'état de la réclamation
+            reclamation.Etat = EtatReclamation.InterventionPlanifiee;
+
+            _context.Update(reclamation);
+            await _context.SaveChangesAsync();
+
 
             return RedirectToAction("AfficherIntervention", new { id = intervention.Id });
         }

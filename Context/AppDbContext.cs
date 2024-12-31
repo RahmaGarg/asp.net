@@ -40,6 +40,11 @@ namespace Atelier_2.Context
                 .OnDelete(DeleteBehavior.Restrict);  // Prevent deletion of Technicien if they have interventions
 
             // Add other model configurations here if needed (e.g., for Client, Product, etc.)
+            modelBuilder.Entity<Reclamation>()
+           .HasOne(r => r.Intervention)  // Une réclamation a une intervention
+           .WithOne(i => i.Reclamation)  // Une intervention est associée à une réclamation
+           .HasForeignKey<Intervention>(i => i.ReclamationId)  // Définir la clé étrangère dans Intervention
+           .OnDelete(DeleteBehavior.SetNull);  // Optionnel : définir le comportement lors de la suppression
         }
     }
 }

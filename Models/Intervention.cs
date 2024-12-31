@@ -11,7 +11,8 @@ namespace Atelier_2.Models
         public int Id { get; set; }
 
         // Clé étrangère vers la réclamation
-        public int ReclamationId { get; set; }
+        // Propriétés de l'intervention
+        public int ReclamationId { get; set; }  // Clé étrangère vers Reclamation
         public Reclamation Reclamation { get; set; }
         // Indicateur si des pièces de rechange sont nécessaires
         public bool NecessitePieces { get; set; }
