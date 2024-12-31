@@ -1,9 +1,14 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
-    // Gestion de la visibilité des pièces et des quantités
     const checkboxNecessitePieces = document.getElementById("NecessitePieces");
-    const piecesContainer = document.getElementById("piecesContainer");
+    const hiddenNecessitePieces = document.getElementById("NecessitePiecesHidden");
 
-    // Affiche/Masque les pièces en fonction de la case "NecessitePieces"
+    // Mettre à jour le champ caché en fonction de l'état de la case à cocher
+    checkboxNecessitePieces.addEventListener("change", function () {
+        hiddenNecessitePieces.value = checkboxNecessitePieces.checked ? "true" : "false";
+    });
+
+    // Logique pour afficher/masquer le container des pièces en fonction de la case
+    const piecesContainer = document.getElementById("piecesContainer");
     piecesContainer.style.display = checkboxNecessitePieces.checked ? "block" : "none";
 
     checkboxNecessitePieces.addEventListener("change", function () {
@@ -16,8 +21,6 @@
         checkbox.addEventListener("change", function () {
             const pieceId = checkbox.id.split('_')[1]; // ID de la pièce
             const quantityContainer = document.getElementById(`quantityContainer_${pieceId}`);
-
-            // Affiche/Masque le champ de quantité
             quantityContainer.style.display = checkbox.checked ? "block" : "none";
         });
     });

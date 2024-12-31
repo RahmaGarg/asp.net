@@ -8,7 +8,15 @@
 
         <p><strong>Date d'intervention :</strong> @Model.DateIntervention.ToString("dd/MM/yyyy")</p>
         <p><strong>Durée d'intervention :</strong> @Model.DureeIntervention heures</p>
-        <p><strong>Technicien Assigné :</strong> @Model.Technicien.UserName</p>
+
+        @if (Model.Technicien != null)
+        {
+            <p><strong>Technicien Assigné :</strong> @Model.Technicien.UserName</p>
+        }
+        else
+        {
+            <p><strong>Technicien Assigné :</strong> Non attribué</p>
+        }
 
         @if (Model.NecessitePieces)
         {

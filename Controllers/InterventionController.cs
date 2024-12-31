@@ -23,6 +23,24 @@ namespace Atelier_2.Controllers
             _userManager = userManager;
             _configuration = configuration;
         }
+        public async Task<IActionResult> AfficherIntervention(int id)
+        {
+            // Vérifier si l'intervention existe dans la base de données
+            var intervention = await _context.Interventions
+                .Include(i => i.Technicien)  // Inclure le technicien associé
+                .Include(i => i.Reclamation)  // Inclure la réclamation associée (si applicable)
+                .Include(i => i.PiecesUtilisees)  // Inclure les pièces utilisées si nécessaire
+                .FirstOrDefaultAsync(i => i.Id == id);
+
+            // Si l'intervention n'existe pas, retourner une page 404
+            if (intervention == null)
+            {
+                return NotFound();
+            }
+
+            // Retourner la vue avec l'intervention
+            return View(intervention);
+        }
 
         // Action GET pour afficher le formulaire d'ajout d'intervention
         public async Task<IActionResult> AjouterIntervention(int reclamationId)
@@ -70,32 +88,22 @@ namespace Atelier_2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AjouterIntervention(AjouterInterventionViewModel model)
         {
-            Console.WriteLine("Début de l'action POST AjouterIntervention");
+            // Debug: vérifier les valeurs transmises
+            Console.WriteLine($"TechnicienId: {model.TechnicienId}");
+            Console.WriteLine($"ReclamationId: {model.ReclamationId}");
+            Console.WriteLine($"DateIntervention: {model.DateIntervention}");
+            Console.WriteLine($"DureeIntervention: {model.DureeIntervention}");
+            Console.WriteLine($"NecessitePieces: {model.NecessitePieces}");
+            Console.WriteLine($"CoutTotal: {model.CoutTotal}");
 
-            // Vérifie si le modèle est null ou invalide
-            if (model == null)
-            {
-                Console.WriteLine("Le modèle reçu est null.");
-                ModelState.AddModelError("", "Le modèle est null.");
-                return View(model);
-            }
+            // Récupérer la réclamation pour vérifier que l'ID existe bien dans la base de données
+            var reclamation = await _context.Reclamations
+                .FirstOrDefaultAsync(r => r.Id == model.ReclamationId);
 
-            // Vérifie si la propriété Pieces est null ou vide
-            if (model.Pieces == null || !model.Pieces.Any(p => p.IsChecked)) // S'assurer qu'au moins une pièce est sélectionnée
+            if (reclamation == null)
             {
-                Console.WriteLine("Aucune pièce sélectionnée.");
-                ModelState.AddModelError("", "Aucune pièce sélectionnée.");
-                return View(model);
-            }
-
-            // Vérifie que les quantités sont valides pour les pièces sélectionnées
-            foreach (var piece in model.Pieces.Where(p => p.IsChecked))
-            {
-                if (piece.Quantity <= 0)
-                {
-                    ModelState.AddModelError("", $"La quantité pour la pièce {piece.Nom} est invalide.");
-                    return View(model);
-                }
+                ModelState.AddModelError("ReclamationId", "La réclamation spécifiée n'existe pas.");
+                return View(model);  // Si la réclamation n'existe pas, on retourne la vue avec l'erreur
             }
 
             // Calcul du coût total pour les pièces sélectionnées
@@ -103,14 +111,14 @@ namespace Atelier_2.Controllers
                 .Where(p => p.IsChecked)
                 .Sum(p => p.Quantity * p.Prix);
 
-            // Créer l'objet Intervention et le sauvegarder
+            // Créer l'objet Intervention
             var intervention = new Intervention
             {
-                ReclamationId = model.ReclamationId,
+                ReclamationId = model.ReclamationId,  // Utiliser l'ID de réclamation du modèle
                 DateIntervention = model.DateIntervention,
                 DureeIntervention = model.DureeIntervention,
-                CoutTotal = coutTotal,
                 NecessitePieces = model.NecessitePieces,
+                CoutTotal = coutTotal,
                 TechnicienId = model.TechnicienId
             };
 
@@ -120,7 +128,9 @@ namespace Atelier_2.Controllers
 
             return RedirectToAction("AfficherIntervention", new { id = intervention.Id });
         }
-    
+
+
+
 
     }
 

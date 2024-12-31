@@ -3,6 +3,7 @@
 <h2>Ajouter une intervention</h2>
 
 <form asp-action="AjouterIntervention" method="post">
+    <input type="hidden" name="ReclamationId" value="@Model.ReclamationId" />
     <div class="form-group">
         <label for="DateIntervention">Date d'Intervention</label>
         <input type="date" class="form-control" id="DateIntervention" name="DateIntervention" value="@Model.DateIntervention.ToString("yyyy-MM-dd")" required />
@@ -32,6 +33,9 @@
         </div>
     </div>
 
+    <!-- Champ caché pour soumettre "false" si la case n'est pas cochée -->
+    <input type="hidden" name="NecessitePieces" value="false" id="NecessitePiecesHidden" />
+
     <div id="piecesContainer" style="display:none;">
         <h4>Choisir les pièces utilisées :</h4>
         @foreach (var piece in Model.Pieces)
@@ -59,6 +63,7 @@
 
     <button type="submit" class="btn btn-primary">Ajouter l'intervention</button>
 </form>
+
 
 @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
 {
