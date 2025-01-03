@@ -31,31 +31,68 @@ namespace Atelier_2.Controllers
         // Ajouter une nouvelle réclamation
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> TraiterReclamation(Reclamation reclamation)
+        public async Task<IActionResult> AjouterReclamation(ReclamationViewModel viewModel)
         {
+            Console.WriteLine("Début de la méthode AjouterReclamation");
+
             if (ModelState.IsValid)
             {
-                var existingReclamation = await _context.Reclamations
-                                                        .FirstOrDefaultAsync(r => r.Id == reclamation.Id);
+                Console.WriteLine("ModelState est valide");
 
-                if (existingReclamation == null)
+                // Vérifiez si l'utilisateur est connecté
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (string.IsNullOrEmpty(userId))
                 {
-                    return NotFound();  // Si la réclamation n'existe pas
+                    Console.WriteLine("L'utilisateur n'est pas connecté");
+                    return RedirectToAction("Login", "Account");
                 }
 
-                // Mettre à jour l'état de la réclamation
-                existingReclamation.Etat = reclamation.Etat;
+                Console.WriteLine($"Utilisateur connecté : {userId}");
 
-                // Sauvegarder les modifications dans la base de données
-                _context.Update(existingReclamation);
-                await _context.SaveChangesAsync();
+                // Créer une nouvelle réclamation
+                var reclamation = new Reclamation
+                {
+                    ProductId = viewModel.ProductId,
+                    Description = viewModel.Description,
+                    DateAchat = viewModel.DateAchat,
+                    DateReclamation = DateTime.Now,
+                    UserId = userId
+                };
 
-                TempData["SuccessMessage"] = "L'état de la réclamation a été mis à jour avec succès.";
-                return RedirectToAction("All");  // Rediriger vers la liste des réclamations
+                Console.WriteLine("Nouvelle réclamation créée avec les données suivantes :");
+                Console.WriteLine($"ProductId : {viewModel.ProductId}");
+                Console.WriteLine($"Description : {viewModel.Description}");
+                Console.WriteLine($"DateAchat : {viewModel.DateAchat}");
+                Console.WriteLine($"DateReclamation : {reclamation.DateReclamation}");
+                Console.WriteLine($"UserId : {reclamation.UserId}");
+
+                try
+                {
+                    _context.Reclamations.Add(reclamation);
+                    await _context.SaveChangesAsync();
+                    Console.WriteLine("Réclamation ajoutée avec succès à la base de données.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Erreur lors de l'ajout à la base de données : {ex.Message}");
+                    return View(viewModel);
+                }
+
+                TempData["SuccessMessage"] = "Réclamation ajoutée avec succès.";
+                return RedirectToAction("MesReclamations");
             }
 
-            return View(reclamation);
+            Console.WriteLine("ModelState est invalide. Voici les erreurs :");
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            {
+                Console.WriteLine($"Erreur : {error.ErrorMessage}");
+            }
+
+            // Si le modèle est invalide, recharger la liste des produits
+            ViewBag.Produits = new SelectList(_context.Products, "Id", "Désignation");
+            return View(viewModel);
         }
+
 
         // Action pour afficher toutes les réclamations de tous les clients
         public async Task<IActionResult> All()

@@ -41,10 +41,10 @@ namespace Atelier_2.Controllers
             // Retourner la vue avec l'intervention
             return View(intervention);
         }
+       
 
-
-        // Action GET pour afficher le formulaire d'ajout d'intervention
-        public async Task<IActionResult> AjouterIntervention(int reclamationId)
+    // Action GET pour afficher le formulaire d'ajout d'intervention
+    public async Task<IActionResult> AjouterIntervention(int reclamationId)
         {
             Console.WriteLine($"Début de l'action GET AjouterIntervention pour la réclamation ID: {reclamationId}");
 
@@ -99,16 +99,31 @@ namespace Atelier_2.Controllers
                 return View(model);
             }
 
-            // Calculer le coût total des pièces
-            decimal coutTotal = 0;
+            // Calculer le coût des pièces
+            decimal coutPieces = 0;
             if (model.Pieces != null)
             {
-                coutTotal = model.Pieces
-                    .Where(p => p.IsChecked)
-                    .Sum(p => p.Quantity * p.Prix);
+                foreach (var piece in model.Pieces)
+                {
+                    if (piece.IsChecked)
+                    {
+                        coutPieces += piece.Quantity * piece.Prix;
+                        Console.WriteLine($"Pièce: {piece.Nom}, Quantité: {piece.Quantity}, Prix Unitaire: {piece.Prix}, Coût: {piece.Quantity * piece.Prix}");
+                    }
+                }
             }
 
-            // Créer une nouvelle intervention
+            Console.WriteLine($"Coût total des pièces: {coutPieces}");
+
+            // Calculer le coût du technicien
+            decimal tarifHoraire = 25.0m; // Tarif horaire défini
+            decimal coutTechnicien = model.DureeIntervention * tarifHoraire;
+            Console.WriteLine($"Durée intervention: {model.DureeIntervention} heures, Coût technicien: {coutTechnicien}");
+
+            // Calculer le coût total
+            decimal coutTotal = coutPieces + coutTechnicien;
+            Console.WriteLine($"Coût total intervention: {coutTotal}");
+
             // Créer une nouvelle intervention
             var intervention = new Intervention
             {
@@ -133,10 +148,53 @@ namespace Atelier_2.Controllers
             _context.Update(reclamation);
             await _context.SaveChangesAsync();
 
-
             return RedirectToAction("AfficherIntervention", new { id = intervention.Id });
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            // Récupérer l'intervention à supprimer
+            var intervention = await _context.Interventions
+                .Include(i => i.Technicien)
+                .FirstOrDefaultAsync(i => i.Id == id);
+
+            if (intervention == null)
+            {
+                return NotFound();
+            }
+
+            return View(intervention); // Retourner une vue pour confirmer la suppression
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var intervention = await _context.Interventions.FindAsync(id);
+            if (intervention == null)
+            {
+                return NotFound();
+            }
+
+            // Supprimer l'intervention
+            _context.Interventions.Remove(intervention);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(ManageInterventions)); // Rediriger vers la liste des interventions
+        }
+
+        public async Task<IActionResult> ManageInterventions()
+        {
+            // Récupérer toutes les interventions, avec leurs techniciens et réclamations associées
+            var interventions = await _context.Interventions
+                .Include(i => i.Technicien) // Inclure les techniciens
+                .Include(i => i.Reclamation) // Inclure les réclamations associées
+                .ToListAsync();
+
+            // Retourner la vue avec les données
+            return View(interventions);
+        }
 
 
 

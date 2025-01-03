@@ -31,18 +31,12 @@
                 <td>
                     @if (reclamation.Etat == Atelier_2.Models.EtatReclamation.InterventionPlanifiee)
                     {
-                        <!-- Vérifier si l'intervention est associée et rediriger vers les détails de l'intervention -->
-                        @if (reclamation.Intervention != null)
-                        {
-                            <a href="@Url.Action("AfficherIntervention", "Intervention", new { id = reclamation.Intervention.Id })" class="btn btn-info">
+                       
+                            <!-- Affichage du bouton Voir les détails de l'intervention -->
+                            <a href="@Url.Action("AfficherIntervention", "Intervention", new { id = reclamation.InterventionId })" class="btn btn-info">
                                 Voir Détails Intervention
                             </a>
-                        }
-                        else
-                        {
-                            <!-- Si l'intervention est null, vous pouvez afficher un message ou un autre bouton -->
-                            <span class="text-warning">Intervention non ajoutée</span>
-                        }
+               
                     }
                     else
                     {

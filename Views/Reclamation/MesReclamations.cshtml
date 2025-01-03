@@ -6,26 +6,37 @@
 
 <h2>@ViewData["Title"]</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Produit</th>
-            <th>Description</th>
-            <th>Date de réclamation</th>
-            <th>État</th>
-            <th>Montant de la facture</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var reclamation in Model)
-        {
+@if (!Model.Any())
+{
+    <p>Aucune réclamation.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
             <tr>
-                <td>@reclamation.Product.Désignation</td>
-                <td>@reclamation.Description</td>
-                <td>@reclamation.DateReclamation.ToString("d")</td>
-                <td>@reclamation.Etat</td>
-                <td>@reclamation.MontantFacture</td>
+                <th>Produit</th>
+                <th>Description</th>
+                <th>Date de réclamation</th>
+                <th>État</th>
+                <th>Montant de la facture</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var reclamation in Model)
+            {
+                <tr>
+                    <td>@reclamation.Product.Désignation</td>
+                    <td>@reclamation.Description</td>
+                    <td>@reclamation.DateReclamation.ToString("d")</td>
+                    <td>@reclamation.Etat</td>
+                    <td>@reclamation.MontantFacture</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<div>
+    <a class="btn btn-primary" href="@Url.Action("AjouterReclamation", "Reclamation")">Ajouter une réclamation</a>
+</div>
