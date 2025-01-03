@@ -5,9 +5,11 @@
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">Intervention #@Model.Id</h5>
+        <p><strong>Id Reclamation :</strong> @(Model.Reclamation.Id)</p>
+        <p><strong>Date Reclamation :</strong> @(Model.Reclamation?.DateReclamation.ToString("dd/MM/yyyy") ?? "Non spécifiée")</p>
 
-        <p><strong>Date d'intervention :</strong> @Model.DateIntervention.ToString("dd/MM/yyyy")</p>
-        <p><strong>Durée d'intervention :</strong> @Model.DureeIntervention heures</p>
+        <p><strong>Date d'intervention :</strong> @(Model.DateIntervention.ToString("dd/MM/yyyy") ?? "Non spécifiée")</p>
+        <p><strong>Durée d'intervention :</strong> @(Model.DureeIntervention) heures</p>
 
         @if (Model.Technicien != null)
         {
@@ -21,7 +23,7 @@
         @if (Model.NecessitePieces)
         {
             <h6>Pièces utilisées :</h6>
-            @if (Model.PiecesUtilisees != null && Model.PiecesUtilisees.Any())
+            if (Model.PiecesUtilisees != null && Model.PiecesUtilisees.Any())
             {
                 <ul>
                     @foreach (var piece in Model.PiecesUtilisees)
@@ -36,7 +38,19 @@
             }
         }
 
-        <p><strong>Coût total :</strong> @Model.CoutTotal €</p>
+        <p><strong>Coût total :</strong> @(Model.CoutTotal) €</p>
+
+        <p>
+            <strong>Sous garantie :</strong>
+            @if (Model.EstSousGarantie)
+            {
+                <span class="text-success">Oui</span>
+            }
+            else
+            {
+                <span class="text-danger">Non</span>
+            }
+        </p>
     </div>
 </div>
 

@@ -86,7 +86,8 @@ namespace Atelier_2.Controllers
                 Id = product.Id,
                 Désignation = product.Désignation,
                 Prix = product.Prix,
-                Catégorie = product.Catégorie,  // Fixed: changed from 'Categorie' to 'Catégorie'
+                Catégorie = product.Catégorie,
+                GarantieDuréeEnMois = product.GarantieDuréeEnMois,// Fixed: changed from 'Categorie' to 'Catégorie'
             };
             return View(productEditViewModel);  // Pass the EditViewModel to the view
         }
@@ -109,8 +110,9 @@ namespace Atelier_2.Controllers
                 product.Désignation = model.Désignation;
                 product.Prix = model.Prix;
                 product.Catégorie = model.Catégorie;
+                product.GarantieDuréeEnMois=model.GarantieDuréeEnMois; // Ajoutez cette ligne
 
-              
+
 
                 // Update the product in the repository
                 Product updatedProduct = productRepository.Update(product);

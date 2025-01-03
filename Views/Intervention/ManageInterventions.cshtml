@@ -14,6 +14,8 @@
             <th>Technicien</th>
             <th>Coût total</th>
             <th>Durée</th>
+            <th>Est Sous Garantie</th>
+
             <th>Actions</th>
         </tr>
     </thead>
@@ -26,6 +28,8 @@
                 <td>@intervention.Technicien?.UserName </td>
                 <td>@intervention.CoutTotal.ToString("C")</td>
                 <td>@intervention.DureeIntervention</td>
+                <td>@intervention.EstSousGarantie</td>
+
                 <td>
                     <a href="@Url.Action("AfficherIntervention", "Intervention", new { id = intervention.Id })" class="btn btn-info">Voir</a>
                     <a href="@Url.Action("Delete", "Intervention", new { id = intervention.Id })" class="btn btn-danger">Supprimer</a>

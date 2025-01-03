@@ -33,5 +33,18 @@ namespace Atelier_2.Models
 
         // Navigation vers l'utilisateur (technicien)
         public IdentityUser Technicien { get; set; }
+        // Propriété calculée pour vérifier si l'intervention est sous garantie
+        public bool EstSousGarantie
+        {
+            get
+            {
+                if (Reclamation?.Product != null)
+                {
+                    var finGarantie = Reclamation.DateAchat.AddMonths(Reclamation.Product.GarantieDuréeEnMois);
+                    return DateIntervention <= finGarantie;
+                }
+                return false;
+            }
+        }
     }
 }

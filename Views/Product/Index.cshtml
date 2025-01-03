@@ -11,6 +11,8 @@
             <th>@Html.DisplayNameFor(model => model.First().Désignation)</th>
             <th>@Html.DisplayNameFor(model => model.First().Prix)</th>
             <th>@Html.DisplayNameFor(model => model.First().Catégorie)</th>
+            <th>@Html.DisplayNameFor(model => model.First().GarantieDuréeEnMois)</th>
+
             <th>Actions</th>
         </tr>
     </thead>
@@ -21,6 +23,8 @@
                 <td>@product.Désignation</td>
                 <td>@product.Prix</td>
                 <td>@product.Catégorie</td>
+                <td>@product.GarantieDuréeEnMois</td>
+
                 <td>
                     <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning">Edit</a> |
                     <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger">Delete</a>
