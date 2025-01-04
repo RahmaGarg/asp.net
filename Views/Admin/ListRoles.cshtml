@@ -3,56 +3,251 @@
 @{
     ViewBag.Title = "All Roles";
 }
-<h1>All Roles</h1>
+
+<!-- Page Header -->
+<div class="text-center mb-5">
+    <h1 class="display-4 font-weight-bold text-dark">All Roles</h1>
+</div>
+
+<!-- Add New Role Button -->
 @if (Model.Any())
 {
-    <a class="btn btn-primary mb-3" style="width:auto" asp-action="CreateRole"
-       asp-controller="admin">Add new role</a>
-    foreach (var role in Model)
-    {
-        <div class="card mb-3">
-            <div class="card-header"> Role Id : @role.Id </div>
-            <div class="card-body"> <h5 class="card-title">@role.Name</h5> </div>
-            <div class="card-footer">
+    <a class="btn btn-primary mb-3 rounded-pill shadow-sm" style="width: auto" asp-action="CreateRole" asp-controller="admin">Add New Role</a>
 
-                <form method="post" asp-action="DeleteRole" asp-route-id="@role.Id">
+    <!-- Role List -->
+    <div class="row">
+        @foreach (var role in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-light rounded-lg">
+                    <div class="card-header bg-light">
+                        <strong>Role Id:</strong> @role.Id
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-muted">@role.Name</h5>
+                    </div>
+                    <div class="card-footer text-center">
+                        <form method="post" asp-action="DeleteRole" asp-route-id="@role.Id" id="deleteForm_@role.Id">
+                            <!-- Edit Button -->
+                            <a asp-controller="Admin" asp-action="EditRole" asp-route-id="@role.Id" class="btn btn-primary">Edit</a>
 
-                    <a asp-controller="Admin" asp-action="EditRole"
-                       asp-route-id="@role.Id" class="btn btn-primary">Edit</a>
-                    <span id="confirmDeleteSpan_@role.Id" style="display:none">
-                        <span>Are you sure you want to delete?</span>
-                        <button type="submit" class="btn btn-danger">Yes</button>
-                        <a href="#" class="btn btn-primary" onclick="confirmDelete('@role.Id', false)">No</a>
+                            <!-- Delete Confirmation -->
+                            <span id="confirmDeleteSpan_@role.Id" style="display:none">
+                                <span>Are you sure you want to delete?</span>
+                                <button type="submit" class="btn btn-danger">Yes</button>
+                                <a href="#" class="btn btn-primary" onclick="confirmDelete('@role.Id', false)">No</a>
+                            </span>
 
-                    </span>
-
-                    <span id="deleteSpan_@role.Id">
-                        <a href="#" class="btn btn-danger" onclick="confirmDelete('@role.Id', true)">Delete</a>
-
-                    </span>
-                </form>
+                            <!-- Delete Button (initial state) -->
+                            <span id="deleteSpan_@role.Id">
+                                <a href="#" class="btn btn-danger" onclick="confirmDelete('@role.Id', true)">Delete</a>
+                            </span>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 }
-
 else
 {
-<div class="card">
-    <div class="card-header">
-        No roles created yet
+    <div class="card shadow-sm border-light rounded-lg">
+        <div class="card-header bg-light text-muted">
+            No Roles Created Yet
+        </div>
+        <div class="card-body text-center">
+            <h5 class="card-title text-muted">Use the button below to create a new role.</h5>
+            <a class="btn btn-primary btn-lg rounded-pill shadow-sm" style="width: auto" asp-controller="admin" asp-action="CreateRole">Create Role</a>
+        </div>
     </div>
-    <div class="card-body">
-        <h5 class="card-title">
-
-            Use the button below to create a role
-
-        </h5>
-
-        <a class="btn btn-primary" style="width:auto"
-           asp-controller="admin" asp-action="CreateRole">
-            Create Role
-        </a>
-    </div>
-</div>
 }
+
+<!-- Optional: Custom Styles for Enhanced Look -->
+<style>
+    /* General Body and Font Styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+    }
+
+    /* Card Header */
+    .card-header {
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 12px 12px 0 0;
+        background-color: #f8f9fa;
+    }
+
+    /* Card Body */
+    .card-body {
+        padding: 20px;
+    }
+
+    /* Card Footer */
+    .card-footer {
+        padding: 10px;
+    }
+
+    /* Form Fields */
+    .form-control {
+        font-size: 16px;
+        padding: 15px;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+        .form-control:focus {
+            border-color: #4e73df;
+            box-shadow: 0 0 10px rgba(79, 115, 223, 0.3);
+        }
+
+    /* Button Styling */
+    .btn-primary {
+        background-color: #4e73df;
+        border-color: #4e73df;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #375aab;
+            border-color: #375aab;
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+
+    /* Card Shadow and Borders */
+    .card {
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Card Footer */
+    .card-footer {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        background-color: #f8f9fa;
+    }
+
+    /* Responsive Grid */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col-md-4 {
+        max-width: 33.33%;
+    }
+
+</style>
+
+<!-- JavaScript for Delete Confirmation -->
+<script>
+    function confirmDelete(roleId, confirm) {
+        if (confirm) {
+            // Show the confirmation dialog (Yes/No buttons)
+            document.getElementById("confirmDeleteSpan_" + roleId).style.display = "inline";
+            // Hide the initial Delete button
+            document.getElementById("deleteSpan_" + roleId).style.display = "none";
+        } else {
+            // Hide the confirmation dialog (Yes/No buttons)
+            document.getElementById("confirmDeleteSpan_" + roleId).style.display = "none";
+            // Show the initial Delete button again
+            document.getElementById("deleteSpan_" + roleId).style.display = "inline";
+        }
+    }
+</script>
+
+<!-- Optional: Custom Styles for Enhanced Look -->
+<style>
+    /* General Body and Font Styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+    }
+
+    /* Card Header */
+    .card-header {
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 12px 12px 0 0;
+        background-color: #f8f9fa;
+    }
+
+    /* Card Body */
+    .card-body {
+        padding: 20px;
+    }
+
+    /* Card Footer */
+    .card-footer {
+        padding: 10px;
+    }
+
+    /* Form Fields */
+    .form-control {
+        font-size: 16px;
+        padding: 15px;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control:focus {
+        border-color: #4e73df;
+        box-shadow: 0 0 10px rgba(79, 115, 223, 0.3);
+    }
+
+    /* Button Styling */
+    .btn-primary {
+        background-color: #4e73df;
+        border-color: #4e73df;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #375aab;
+        border-color: #375aab;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        border-color: #c82333;
+    }
+
+    /* Card Shadow and Borders */
+    .card {
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Card Footer */
+    .card-footer {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        background-color: #f8f9fa;
+    }
+
+    /* Responsive Grid */
+  
+    }
+</style>

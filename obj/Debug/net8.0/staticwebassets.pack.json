@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets\\Atelier_2.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\css\\material-design-iconic-font.css",
+      "PackagePath": "staticwebassets\\css\\material-design-iconic-font.css"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\css\\material-design-iconic-font.min.css",
+      "PackagePath": "staticwebassets\\css\\material-design-iconic-font.min.css"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\css\\style.css.map"
     },
     {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\favicon.ico",
@@ -17,12 +33,24 @@
       "PackagePath": "staticwebassets\\images\\accessdenied.png"
     },
     {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\signin-image.jpg",
+      "PackagePath": "staticwebassets\\images\\signin-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\signup-image.jpg",
+      "PackagePath": "staticwebassets\\images\\signup-image.jpg"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\CustomScript.js",
       "PackagePath": "staticwebassets\\js\\CustomScript.js"
     },
     {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\intervention.js",
       "PackagePath": "staticwebassets\\js\\intervention.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\site.js",

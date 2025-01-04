@@ -2,43 +2,153 @@
 @{
     ViewBag.Title = "User Login";
 }
-<h1>User Login</h1>
-@{
-    var returnUrl = Context.Request.Query["ReturnUrl"];
-}
-<div class="row">
-    <div class="col-md-12">
 
-        <form asp-route-returnurl="@returnUrl" method="post">
-            <div asp-validation-summary="All" class="text-danger"></div>
+<!-- Full Page Background: Applying to html and body -->
+<div class="full-page-bg">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
 
-            <div class="form-group">
-                <label asp-for="Email"></label>
+        <!-- Card Component -->
+        <div class="card shadow-lg border-0 rounded-lg w-100 w-md-75 w-lg-50">
 
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-
-            </div>
-            <div class="form-group">
-                <label asp-for="Password"></label>
-
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-
-            </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label asp-for="RememberMe">
-                        <input asp-for="RememberMe" />
-
-                        @Html.DisplayNameFor(m => m.RememberMe)
-
-                    </label>
-                </div>
+            <!-- Card Header -->
+            <div class="card-header text-center bg-dark text-white">
+                <h2 class="font-weight-bold mb-0">Login to Your Account</h2>
+                <p class="text-muted">Please enter your credentials below</p>
             </div>
 
-            <button type="submit" class="btn btn-primary">Login</button>
+            <!-- Card Body -->
+            <div class="card-body p-4">
 
-        </form>
+                <!-- Form Start -->
+                <form asp-route-returnurl="@Context.Request.Query["ReturnUrl"]" method="post">
+
+                    <!-- Validation Summary -->
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input asp-for="Email" class="form-control" placeholder="Enter your email" />
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label">Password</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password" />
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <!-- Remember Me Field -->
+                    <div class="form-check mb-4">
+                        <input asp-for="RememberMe" type="checkbox" class="form-check-input" id="rememberMe" />
+                        <label class="form-check-label" for="rememberMe">@Html.DisplayNameFor(m => m.RememberMe)</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group text-center">
+                        <input type="submit" value="Login" class="btn btn-primary btn-block py-2 px-4 rounded-pill font-weight-bold" />
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- Card Footer -->
+            <div class="card-footer text-center">
+                <p class="text-muted mb-0">Don't have an account? <a href="/Account/Register" class="text-primary">Sign up here</a></p>
+            </div>
+
+        </div>
+        <!-- End of Card Component -->
+
     </div>
 </div>
+
+<!-- Optional: Add Font Awesome Icons for enhanced user experience -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<!-- Custom Styles to Make the Background Cover the Entire Page -->
+<style>
+    /* Ensure the html and body cover the entire page */
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    /* Full-page background with blue gradient */
+    .full-page-bg {
+        height: 100vh; /* Ensure background takes up 100% height of viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Adjust the card width and padding */
+    .card {
+        max-width: 600px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Add extra padding around the form */
+    .card-body {
+        padding: 40px;
+    }
+
+    /* Card Header and Footer Style */
+    .card-header, .card-footer {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    /* Optional: Add shadow for the submit button hover effect */
+    .btn-primary {
+        background-color: #4e73df;
+        border-radius: 50px;
+        padding: 12px;
+        font-weight: 600;
+    }
+
+        /* Hover effect for submit button */
+        .btn-primary:hover {
+            background-color: #375aab;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    /* Input field with icons */
+    .input-group-text {
+        background-color: #1a4e9b;
+        border: none;
+        color: white;
+    }
+
+    /* Form group text */
+    .control-label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Links styling */
+    .text-muted {
+        font-size: 14px;
+    }
+
+    .text-primary {
+        color: #4e73df;
+    }
+
+        .text-primary:hover {
+            color: #375aab;
+        }
+</style>

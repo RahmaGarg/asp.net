@@ -4,8 +4,7 @@
     ViewData["Title"] = "List of Pieces";
 }
 
-<h1>List of Pieces</h1>
-
+<h1>@ViewData["Title"]</h1>
 <table class="table">
     <thead>
         <tr>
@@ -20,9 +19,9 @@
             <tr>
                 <td>@piece.Nom</td>
                 <td>@piece.Prix</td>
+              
                 <td>
-                    <a href="@Url.Action("Details", new { id = piece.Id })" class="btn btn-info">Details</a>
-                    <a href="@Url.Action("Edit", new { id = piece.Id })" class="btn btn-primary">Edit</a>
+                    <a href="@Url.Action("Edit", new { id = piece.Id })" class="btn btn-warning">Edit</a>
                     <a href="@Url.Action("Delete", new { id = piece.Id })" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
@@ -30,4 +29,4 @@
     </tbody>
 </table>
 
-<a href="@Url.Action("Create")" class="btn btn-success">Create New Piece</a>
+<a href="@Url.Action("Create")" class="btn btn-primary">Create New Piece</a>

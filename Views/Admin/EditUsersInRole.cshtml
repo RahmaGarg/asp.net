@@ -3,35 +3,118 @@
 @{
     var roleId = ViewBag.roleId;
 }
+
+<!-- Page Header -->
+<div class="text-center mb-5">
+    <h1 class="display-4 font-weight-bold text-dark">Add or Remove Users from this Role</h1>
+</div>
+
+<!-- Form Start -->
 <form method="post">
-    <div class="card">
-        <div class="card-header">
-
-            <h2>Add or remove users from this role</h2>
-
+    <div class="card shadow-sm border-light rounded-lg">
+        <div class="card-header bg-light text-dark">
+            <h2 class="font-weight-bold">Users in this Role</h2>
         </div>
+
         <div class="card-body">
             @for (int i = 0; i < Model.Count; i++)
             {
-                <div class="form-check m-1">
+                <div class="form-check m-3">
                     <input type="hidden" asp-for="@Model[i].UserId" />
                     <input type="hidden" asp-for="@Model[i].UserName" />
 
                     <input asp-for="@Model[i].IsSelected" class="form-check-input" />
                     <label class="form-check-label" asp-for="@Model[i].IsSelected">
-
                         @Model[i].UserName
                     </label>
                 </div>
             }
         </div>
-        <div class="card-footer">
 
-            <input type="submit" value="Update" class="btn btn-primary"
-                   style="width:auto" />
-            <a asp-action="EditRole" asp-route-id="@roleId"
-               class="btn btn-primary" style="width:auto">Cancel</a>
-
+        <!-- Card Footer with Buttons -->
+        <div class="card-footer text-center">
+            <input type="submit" value="Update" class="btn btn-primary btn-lg rounded-pill shadow-sm mb-3" />
+            <a asp-action="EditRole" asp-route-id="@roleId" class="btn btn-secondary btn-lg rounded-pill shadow-sm">
+                Cancel
+            </a>
         </div>
     </div>
 </form>
+
+<!-- Optional: Custom Styles -->
+<style>
+    /* General Body and Font Styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+    }
+
+    /* Form Fields */
+    .form-check-input {
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-check-input:focus {
+        border-color: #4e73df;
+        box-shadow: 0 0 10px rgba(79, 115, 223, 0.3);
+    }
+
+    .form-check-label {
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+
+    /* Button Styling */
+    .btn-primary {
+        background-color: #4e73df;
+        border-color: #4e73df;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #375aab;
+        border-color: #375aab;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        border-color: #5a6268;
+    }
+
+    /* Card Styling */
+    .card {
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #f8f9fa;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-footer {
+        padding: 10px;
+    }
+
+    /* Responsive Design */
+  
+    }
+</style>

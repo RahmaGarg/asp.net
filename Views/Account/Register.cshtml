@@ -2,44 +2,123 @@
 @{
     ViewBag.Title = "User Registration";
 }
-<h1>User Registration</h1>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
 
-            <div asp-validation-summary="All" class="text-danger"></div>
+<!-- Full Page Background: Applying to html and body -->
+<div class="full-page-bg">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
 
-            <div class="form-group">
+        <!-- Card Component -->
+        <div class="card shadow-lg border-0 rounded-lg w-100 w-md-75 w-lg-50">
 
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-
+            <!-- Card Header -->
+            <div class="card-header text-center bg-dark text-white">
+                <h2 class="font-weight-bold mb-0">Create Your Account</h2>
+                <p class="text-muted">Please fill in the details below</p>
             </div>
 
-          
-            <div class="form-group">
+            <!-- Card Body -->
+            <div class="card-body p-4">
 
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
+                <!-- Form Start -->
+                <form method="post">
+
+                    <!-- Validation Summary -->
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input asp-for="Email" class="form-control" placeholder="Enter your email" />
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label">Password</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password" />
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword" class="control-label">Confirm Password</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm your password" />
+                        </div>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group text-center">
+                        <input type="submit" value="Register" class="btn btn-primary btn-block py-2 px-4 rounded-pill font-weight-bold" />
+                    </div>
+
+                </form>
 
             </div>
-            <div class="form-group">
-
-                <label asp-for="ConfirmPassword" class="control-label"></label>
-                <input asp-for="ConfirmPassword" class="form-control" />
-
-                <span asp-validation-for="ConfirmPassword" class="text-
-danger"></span>
-
+            <!-- Card Footer -->
+            <div class="card-footer text-center">
+                <p class="text-muted mb-0">Already have an account? <a href="/Account/Login" class="text-primary">Login here</a></p>
             </div>
-            <div class="form-group">
+        </div>
+        <!-- End of Card Component -->
 
-                <input type="submit" value="Register" class="btn btn-primary" />
-
-            </div>
-        </form>
     </div>
 </div>
+
+<!-- Optional: Add Font Awesome Icons for enhanced user experience -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<!-- Custom Styles to Make the Background Cover the Entire Page -->
+<style>
+    /* Ensure the html and body cover the entire page */
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    /* Full-page background with white color */
+    .full-page-bg {
+        height: 100vh; /* Ensure background takes up 100% height of viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Adjust the card width and padding */
+    .card {
+        max-width: 600px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Add extra padding around the form */
+    .card-body {
+        padding: 40px;
+    }
+
+    /* Ensure the card header and footer have rounded corners */
+    .card-header, .card-footer {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    /* Optional: Add shadow for the submit button hover effect */
+    .btn-primary:hover {
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+</style>
