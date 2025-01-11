@@ -1,1 +1,96 @@
-﻿<h1>Hello ASP.NET</h1>
+﻿<!-- Index.cshtml -->
+<div class="container">
+    <div class="row">
+        <!-- Card pour ajouter un rôle -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="~/images/22.png" class="card-img-top" alt="Ajouter un Rôle">
+                <div class="card-body">
+                    <h5 class="card-title">Ajouter Un Rôle</h5>
+                    <p class="card-text">Créez un nouveau role.</p>
+                    <a href="@Url.Action("CreateRole", "Admin")" class="btn btn-primary">Accéder</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card pour la gestion des rôles -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="~/images/1.png" class="card-img-top" alt="Gestion des Rôles">
+                <div class="card-body">
+                    <h5 class="card-title">Gestion des Rôles</h5>
+                    <p class="card-text">Gérer les rôles.</p>
+                    <a href="@Url.Action("ListRoles", "Admin")" class="btn btn-primary">Accéder</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card pour la gestion des produits -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="~/images/6.png" class="card-img-top" alt="Produits">
+                <div class="card-body">
+                    <h5 class="card-title">Gestion des Produits</h5>
+                    <p class="card-text">Ajoutez et gérez vos produits.</p>
+                    <a href="@Url.Action("Index", "Product")" class="btn btn-primary">Accéder</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Card pour les réclamations -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="~/images/5.png" class="card-img-top" alt="Réclamations">
+                <div class="card-body">
+                    <h5 class="card-title">Réclamations</h5>
+                    <p class="card-text">Consultez et gérez vos réclamations.</p>
+                    <a href="@Url.Action("All", "Reclamation")" class="btn btn-primary">Accéder</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card pour la gestion des pièces -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="~/images/3.png" class="card-img-top" alt="Gestion des Pièces">
+                <div class="card-body">
+                    <h5 class="card-title">Gestion des Pièces</h5>
+                    <p class="card-text">Gérez les pièces de rechange.</p>
+                    <a href="@Url.Action("Index", "Piece")" class="btn btn-primary">Accéder</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card pour les interventions -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="~/images/4.png" class="card-img-top" alt="Interventions">
+                <div class="card-body">
+                    <h5 class="card-title">Interventions</h5>
+                    <p class="card-text">Planifiez et gérez les interventions techniques.</p>
+                    <a href="@Url.Action("ManageInterventions", "Intervention")" class="btn btn-primary">Accéder</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .card-img-top {
+        width: 60%; /* Ajustez la largeur selon vos besoins */
+        height: 60%; /* Maintient le ratio de l'image */
+        margin: 0 auto; /* Centre l'image horizontalement */
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centre le contenu dans la carte */
+    }
+
+    .btn {
+        margin-top: auto; /* Pousse le bouton vers le bas pour le centrer */
+    }
+  </style>
+  </style>
