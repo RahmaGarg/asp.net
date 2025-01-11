@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rE84d4KG78gMyf3GI925N5nCeB8p/nDCdsNCTPQBmLA=",
+  "Hash": "OIYZ/dL9AZOfsT8JlsGvHBjYnsJJ2MWrOJ4stW000Vo=",
   "Source": "Atelier_2",
   "BasePath": "_content/Atelier_2",
   "Mode": "Default",
@@ -167,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\2.png",
+      "SourceId": "Atelier_2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\",
+      "BasePath": "_content/Atelier_2",
+      "RelativePath": "images/2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\2.png"
     },
     {
       "Identity": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\accessdenied.png",

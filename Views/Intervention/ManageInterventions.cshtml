@@ -15,7 +15,6 @@
             <th>Coût total</th>
             <th>Durée</th>
             <th>Est Sous Garantie</th>
-
             <th>Actions</th>
         </tr>
     </thead>
@@ -25,11 +24,19 @@
             <tr>
                 <td>@intervention.Id</td>
                 <td>@intervention.DateIntervention.ToString("dd/MM/yyyy")</td>
-                <td>@intervention.Technicien?.UserName </td>
+                <td>@intervention.Technicien?.UserName</td>
                 <td>@intervention.CoutTotal.ToString("C")</td>
                 <td>@intervention.DureeIntervention</td>
-                <td>@intervention.EstSousGarantie</td>
-
+                <td>
+                    @if (intervention.EstSousGarantie)
+                    {
+                        <span class="text-success">Oui</span>
+                    }
+                    else
+                    {
+                        <span class="text-danger">Non</span>
+                    }
+                </td>
                 <td>
                     <a href="@Url.Action("AfficherIntervention", "Intervention", new { id = intervention.Id })" class="btn btn-info">Voir</a>
                     <a href="@Url.Action("Delete", "Intervention", new { id = intervention.Id })" class="btn btn-danger">Supprimer</a>
@@ -39,3 +46,72 @@
     </tbody>
 </table>
 
+<style>
+    /* General Body and Font Styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        padding: 20px;
+    }
+
+    /* Table Styling */
+    .table {
+        width: 100%;
+        margin: 20px auto; /* Centers the table horizontally and adds top margin */
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+        .table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            text-align: center; /* Center-aligns text in table headers */
+            padding: 15px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .table td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+            text-align: center; /* Center-aligns text in table cells */
+        }
+
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+
+    /* Button Styling */
+    .btn {
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        color: #ffffff;
+    }
+
+        .btn-info:hover {
+            background-color: #138496;
+            border-color: #117a8b;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: #ffffff;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+</style>

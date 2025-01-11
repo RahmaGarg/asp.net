@@ -1,57 +1,144 @@
 ﻿@model Atelier_2.Models.Intervention
 
-<h2>Détails de l'intervention</h2>
+<style>
+    /* General Body and Font Styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        padding: 20px;
+    }
 
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Intervention #@Model.Id</h5>
-        <p><strong>Id Reclamation :</strong> @(Model.Reclamation.Id)</p>
-        <p><strong>Date Reclamation :</strong> @(Model.Reclamation?.DateReclamation.ToString("dd/MM/yyyy") ?? "Non spécifiée")</p>
+    /* Table Styling */
+    .table {
+        width: 80%;
+        margin: 20px auto; /* Centers the table horizontally and adds top margin */
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
 
-        <p><strong>Date d'intervention :</strong> @(Model.DateIntervention.ToString("dd/MM/yyyy") ?? "Non spécifiée")</p>
-        <p><strong>Durée d'intervention :</strong> @(Model.DureeIntervention) heures</p>
-
-        @if (Model.Technicien != null)
-        {
-            <p><strong>Technicien Assigné :</strong> @Model.Technicien.UserName</p>
-        }
-        else
-        {
-            <p><strong>Technicien Assigné :</strong> Non attribué</p>
-        }
-
-        @if (Model.NecessitePieces)
-        {
-            <h6>Pièces utilisées :</h6>
-            if (Model.PiecesUtilisees != null && Model.PiecesUtilisees.Any())
-            {
-                <ul>
-                    @foreach (var piece in Model.PiecesUtilisees)
-                    {
-                        <li>@piece.Nom - @piece.Prix €</li>
-                    }
-                </ul>
-            }
-            else
-            {
-                <p>Aucune pièce utilisée.</p>
-            }
+        .table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            text-align: center; /* Center-aligns text in table headers */
+            padding: 15px;
+            border-bottom: 2px solid #e9ecef;
         }
 
-        <p><strong>Coût total :</strong> @(Model.CoutTotal) €</p>
+        .table td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
 
-        <p>
-            <strong>Sous garantie :</strong>
-            @if (Model.EstSousGarantie)
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+
+    /* Button Styling */
+    .btn {
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #4e73df;
+        border-color: #4e73df;
+        color: #ffffff;
+    }
+
+        .btn-primary:hover {
+            background-color: #375aab;
+            border-color: #375aab;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #ffffff;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: #ffffff;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    /* Card Styling */
+    .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 20px auto; /* Centers the card */
+        padding: 20px;
+        max-width: 600px; /* Limits card width */
+    }
+
+    .card-title {
+        margin-bottom: 15px; /* Adds space below the card title */
+    }
+</style>
+
+<head>
+    <!-- Ajoutez le lien Font Awesome ici -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <h2><i class="fas fa-info-circle"></i> Détails de l'intervention</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Intervention #@Model.Id</h5>
+            <p><strong>Id Reclamation :</strong> @(Model.Reclamation.Id)</p>
+            <p><strong>Date Reclamation :</strong> @(Model.Reclamation?.DateReclamation.ToString("dd/MM/yyyy") ?? "Non spécifiée")</p>
+            <p><strong>Date d'intervention :</strong> @(Model.DateIntervention.ToString("dd/MM/yyyy") ?? "Non spécifiée")</p>
+            <p><strong>Durée d'intervention :</strong> @(Model.DureeIntervention) heures</p>
+
+            <p><strong>Technicien Assigné :</strong> @(Model.Technicien != null ? Model.Technicien.UserName : "Non attribué")</p>
+
+            @if (Model.NecessitePieces)
             {
-                <span class="text-success">Oui</span>
+                <h6>Pièces utilisées :</h6>
+                @if (Model.PiecesUtilisees != null && Model.PiecesUtilisees.Any())
+                {
+                    <ul>
+                        @foreach (var piece in Model.PiecesUtilisees)
+                        {
+                            <li>@piece.Nom - @piece.Prix €</li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>Aucune pièce utilisée.</p>
+                }
             }
-            else
-            {
-                <span class="text-danger">Non</span>
-            }
-        </p>
+
+            <p><strong>Coût total :</strong> @(Model.CoutTotal) €</p>
+
+            <p>
+                <strong>Sous garantie :</strong>
+                <span class="@(Model.EstSousGarantie ? "text-success" : "text-danger")">@((Model.EstSousGarantie) ? "Oui" : "Non")</span>
+            </p>
+        </div>
     </div>
-</div>
 
-<a href="@Url.Action("ManageInterventions")" class="btn btn-primary">Retour aux interventions</a>
+    <a href="@Url.Action("ManageInterventions")" class="btn btn-primary">Retour aux interventions</a>
+</body>

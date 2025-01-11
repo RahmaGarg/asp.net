@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\2.png",
+      "PackagePath": "staticwebassets\\images\\2.png"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\accessdenied.png",
       "PackagePath": "staticwebassets\\images\\accessdenied.png"
     },

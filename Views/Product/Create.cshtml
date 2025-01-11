@@ -23,7 +23,7 @@
         "Chauffage Central"
         }),
                  "Sélectionnez une catégorie",
-                 new { @class = "form-control" })
+                 new { @class = "form-control", style = "height: 50px;" }) <!-- Ajout de la hauteur -->
         <span asp-validation-for="Catégorie" class="text-danger"></span>
     </div>
     <div class="form-group">
@@ -34,3 +34,66 @@
 
     <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>
+
+<style>
+    /* General Body and Font Styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        padding: 20px;
+    }
+
+    /* Form Control Styling */
+    .form-control {
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 16px;
+        border: 1px solid #d1d3e2;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: #4e73df;
+            box-shadow: 0 0 10px rgba(78, 115, 223, 0.2);
+        }
+
+    /* Form Group Styling */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Label Styling */
+    label {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    /* Validation Error Styling */
+    .text-danger {
+        font-size: 12px;
+        color: #dc3545;
+    }
+
+    /* Button Styling */
+    .btn {
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #4e73df;
+        border-color: #4e73df;
+        color: #ffffff;
+    }
+
+        .btn-primary:hover {
+            background-color: #375aab;
+            border-color: #375aab;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+</style>

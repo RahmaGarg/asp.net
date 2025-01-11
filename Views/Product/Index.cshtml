@@ -4,6 +4,94 @@
     ViewData["Title"] = "Product List";
 }
 
+<!-- Optional: Custom Styles for Enhanced Look -->
+<style>
+    /* General Body and Font Styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        padding: 20px;
+    }
+
+    /* Table Styling */
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+        .table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            text-align: left;
+            padding: 15px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .table td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+
+    /* Button Styling */
+    .btn {
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #4e73df;
+        border-color: #4e73df;
+        color: #ffffff;
+    }
+
+        .btn-primary:hover {
+            background-color: #375aab;
+            border-color: #375aab;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #ffffff;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: #ffffff;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    /* Create New Button */
+    .btn-create {
+        margin-top: 20px;
+        display: inline-block;
+    }
+</style>
+
 <h1>@ViewData["Title"]</h1>
 <table class="table">
     <thead>
@@ -12,7 +100,6 @@
             <th>@Html.DisplayNameFor(model => model.First().Prix)</th>
             <th>@Html.DisplayNameFor(model => model.First().Catégorie)</th>
             <th>@Html.DisplayNameFor(model => model.First().GarantieDuréeEnMois)</th>
-
             <th>Actions</th>
         </tr>
     </thead>
@@ -24,13 +111,12 @@
                 <td>@product.Prix</td>
                 <td>@product.Catégorie</td>
                 <td>@product.GarantieDuréeEnMois</td>
-
                 <td>
-                    <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning">Edit</a> |
+                    <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning">Edit</a>
                     <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<a asp-action="Create" class="btn btn-primary">Create New Product</a>
+<a asp-action="Create" class="btn btn-primary btn-create">Create New Product</a>

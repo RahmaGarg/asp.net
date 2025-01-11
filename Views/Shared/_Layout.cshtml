@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
@@ -11,12 +12,54 @@
     <!-- Bootstrap CSS (via CDN) -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/custom.css" rel="stylesheet" /> <!-- Custom CSS -->
+    <style>
+        <style >
+        /* Fixer la hauteur de la navbar */
+        .navbar {
+            height: 60px; /* Ajustez cette valeur en fonction de la hauteur souhaitée */
+            display: flex; /* Utiliser flexbox pour un meilleur alignement */
+            align-items: center; /* Centrer verticalement les éléments */
+        }
+
+        .navbar-brand {
+            display: flex; /* Permet de mettre l'image et le texte sur la même ligne */
+            align-items: center; /* Centre verticalement le contenu */
+        }
+
+            .navbar-brand img {
+                height: 60px; /* Ajustez la hauteur ici */
+                width: auto; /* La largeur s'ajuste automatiquement pour maintenir les proportions */
+                margin-right: 10px; /* Ajoute un espacement à droite de l'image */
+            }
+
+        .navbar-brand {
+            font-family: 'Lobster', cursive; /* Applique la nouvelle police */
+            font-size: 1.5rem; /* Ajustez la taille de la police selon vos préférences */
+        }
+
+        .navbar-nav {
+            display: flex; /* Utiliser flexbox pour la liste de navigation */
+            align-items: center; /* Centrer verticalement tous les éléments */
+        }
+
+        .nav-item {
+            margin-left: 15px; /* Ajustez cette valeur selon vos besoins */
+        }
+
+        .nav-link {
+            display: flex; /* Assurez-vous que le lien est un élément flex */
+            align-items: center; /* Centre le texte verticalement */
+        }
+    </style>    
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">MyApp</a>
+            <a class="navbar-brand">
+                <img src="~/images/2.png" alt="Logo" height="30" class="d-inline-block align-top" />
+                 Service Aprés Vente App
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,8 +70,10 @@
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administration</a>
-                                <div class="dropdown-menu">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Administration
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="CreateRole">Créer un rôle</a>
                                     <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="ListRoles">Liste des rôles</a>
                                     <a class="dropdown-item" asp-area="" asp-controller="Product" asp-action="Index">Produits</a>
@@ -41,8 +86,10 @@
                         else if (User.IsInRole("User"))
                         {
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Réclamations</a>
-                                <div class="dropdown-menu">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Réclamations
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" asp-area="" asp-controller="Reclamation" asp-action="MesReclamations">Mes Réclamations</a>
                                 </div>
                             </li>
@@ -67,12 +114,12 @@
         </div>
     </nav>
 
-    <!-- Contenu principal -->
+    <!-- Main Content -->
     <div class="container mt-4">
         @RenderBody()
     </div>
 
-    <!-- Pied de page -->
+    <!-- Footer -->
     <footer class="bg-light py-3 mt-4">
         <div class="container text-center">
             <p>&copy; 2024 MyApp. Tous droits réservés.</p>
