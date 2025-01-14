@@ -1,5 +1,58 @@
-﻿<div class="text-center">
-    <h1 class="text-danger">Access Denied</h1>
-    <h6 class="text-danger">You do not have persmission to view this resource</h6>
-    <img src="~/images/accessdenied.png" style="height:300px; width:300px" />
+﻿<div>
+    <div class="access-denied-container">
+        <div class="access-denied-content">
+            <h1 class="access-denied-title">403 - Access Denied</h1>
+            <p class="access-denied-message">
+                Oops! You don't have permission to view this page. Please contact the administrator for further assistance.
+            </p>
+            <a class="go-back-btn" href="/Home/Index">Go back to homepage</a>
+        </div>
+    </div>
 </div>
+
+<style>
+    .access-denied-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fff; /* White background */
+    }
+
+    .access-denied-content {
+        text-align: center;
+        padding: 40px;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: 2px solid #dfe1e6; /* Grey border */
+    }
+
+    .access-denied-title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #e74c3c;
+        margin-bottom: 20px;
+    }
+
+    .access-denied-message {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .go-back-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #3498db;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+        .go-back-btn:hover {
+            background-color: #2980b9;
+        }
+</style>

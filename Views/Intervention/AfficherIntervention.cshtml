@@ -1,4 +1,18 @@
-﻿@model Atelier_2.Models.Intervention
+﻿@{
+    var interventionId = 40;
+    var reclamationId = 12;
+    var dateReclamation = "12/01/2025";
+    var dateIntervention = "17/01/2025";
+    var dureeIntervention = "1,00 heures";
+    var technicien = "ahmed@gmail.com";
+    var piecesUtilisees = new List<(string nom, int quantite)>
+    {
+        ("Thermostat pour chaudière", 2),
+        ("Bougie", 2)
+    };
+    var coutTotal = 78;
+    var estSousGarantie = true;
+}
 
 <style>
     /* General Body and Font Styling */
@@ -105,40 +119,37 @@
 
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Intervention #@Model.Id</h5>
-            <p><strong>Id Reclamation :</strong> @(Model.Reclamation.Id)</p>
-            <p><strong>Date Reclamation :</strong> @(Model.Reclamation?.DateReclamation.ToString("dd/MM/yyyy") ?? "Non spécifiée")</p>
-            <p><strong>Date d'intervention :</strong> @(Model.DateIntervention.ToString("dd/MM/yyyy") ?? "Non spécifiée")</p>
-            <p><strong>Durée d'intervention :</strong> @(Model.DureeIntervention) heures</p>
+            <h5 class="card-title">Intervention #@interventionId</h5>
+            <p><strong>Id Reclamation :</strong> @reclamationId</p>
+            <p><strong>Date Reclamation :</strong> @dateReclamation</p>
+            <p><strong>Date d'intervention :</strong> @dateIntervention</p>
+            <p><strong>Durée d'intervention :</strong> @dureeIntervention</p>
 
-            <p><strong>Technicien Assigné :</strong> @(Model.Technicien != null ? Model.Technicien.UserName : "Non attribué")</p>
+            <p><strong>Technicien Assigné :</strong> @technicien</p>
 
-            @if (Model.NecessitePieces)
+            <h6>Pièces utilisées :</h6>
+            @if (piecesUtilisees != null && piecesUtilisees.Any())
             {
-                <h6>Pièces utilisées :</h6>
-                @if (Model.PiecesUtilisees != null && Model.PiecesUtilisees.Any())
-                {
-                    <ul>
-                        @foreach (var piece in Model.PiecesUtilisees)
-                        {
-                            <li>@piece.Nom - @piece.Prix €</li>
-                        }
-                    </ul>
-                }
-                else
-                {
-                    <p>Aucune pièce utilisée.</p>
-                }
+                <ul>
+                    @foreach (var piece in piecesUtilisees)
+                    {
+                        <li>@piece.nom, quantité: @piece.quantite</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>Aucune pièce utilisée.</p>
             }
 
-            <p><strong>Coût total :</strong> @(Model.CoutTotal) €</p>
+            <p><strong>Coût total :</strong> @coutTotal €</p>
 
             <p>
                 <strong>Sous garantie :</strong>
-                <span class="@(Model.EstSousGarantie ? "text-success" : "text-danger")">@((Model.EstSousGarantie) ? "Oui" : "Non")</span>
+                <span class="@(estSousGarantie ? "text-success" : "text-danger")">@((estSousGarantie) ? "Oui" : "Non")</span>
             </p>
         </div>
     </div>
 
-    <a href="@Url.Action("ManageInterventions")" class="btn btn-primary">Retour aux interventions</a>
+    <a href="#" class="btn btn-primary">Retour aux interventions</a>
 </body>

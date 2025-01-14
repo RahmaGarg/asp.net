@@ -19,7 +19,6 @@ else
                 <th>Description</th>
                 <th>Date de réclamation</th>
                 <th>État</th>
-                <th>Montant de la facture</th>
             </tr>
         </thead>
         <tbody>
@@ -30,7 +29,6 @@ else
                     <td>@reclamation.Description</td>
                     <td>@reclamation.DateReclamation.ToString("d")</td>
                     <td>@reclamation.Etat</td>
-                    <td>@reclamation.MontantFacture</td>
                 </tr>
             }
         </tbody>
@@ -40,3 +38,89 @@ else
 <div>
     <a class="btn btn-primary" href="@Url.Action("AjouterReclamation", "Reclamation")">Ajouter une réclamation</a>
 </div>
+
+<style>
+    /* General Body and Font Styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        padding: 20px;
+    }
+
+    /* Table Styling */
+    .table {
+        width: 80%;
+        margin: 20px auto; /* Centers the table horizontally and adds top margin */
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+        .table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            text-align: left;
+            padding: 15px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .table td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Table Styling */
+        .table th, .table td {
+            text-align: center; /* Center-aligns text in table headers and cells */
+        }
+
+    /* Button Styling */
+    .btn {
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #4e73df;
+        border-color: #4e73df;
+        color: #ffffff;
+    }
+
+        .btn-primary:hover {
+            background-color: #375aab;
+            border-color: #375aab;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #ffffff;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: #ffffff;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+</style>

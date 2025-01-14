@@ -56,7 +56,7 @@ namespace Atelier_2.Migrations
 
                     b.HasIndex("TechnicienId");
 
-                    b.ToTable("Interventions");
+                    b.ToTable("Interventions", (string)null);
                 });
 
             modelBuilder.Entity("Atelier_2.Models.Piece", b =>
@@ -77,7 +77,7 @@ namespace Atelier_2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pieces");
+                    b.ToTable("Pieces", (string)null);
                 });
 
             modelBuilder.Entity("Atelier_2.Models.Product", b =>
@@ -105,7 +105,7 @@ namespace Atelier_2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Atelier_2.Models.Reclamation", b =>
@@ -149,7 +149,7 @@ namespace Atelier_2.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reclamations");
+                    b.ToTable("Reclamations", (string)null);
                 });
 
             modelBuilder.Entity("InterventionPiece", b =>
@@ -164,7 +164,7 @@ namespace Atelier_2.Migrations
 
                     b.HasIndex("PiecesUtiliseesId");
 
-                    b.ToTable("InterventionPiece");
+                    b.ToTable("InterventionPiece", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

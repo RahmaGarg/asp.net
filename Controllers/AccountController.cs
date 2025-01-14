@@ -22,6 +22,29 @@ namespace Atelier_2.Controllers
         {
             return View();
         }
+        [HttpGet]
+public async Task<IActionResult> Profile()
+{
+    var user = await userManager.GetUserAsync(User);
+
+    if (user == null)
+    {
+        return RedirectToAction("Login", "Account");
+    }
+
+    // Obtenir les revendications (claims) de l'utilisateur
+    var claims = await userManager.GetClaimsAsync(user);
+    var adresseClaim = claims.FirstOrDefault(c => c.Type == "Adresse");
+
+    var model = new ProfileViewModel
+    {
+        Email = user.Email,
+        Adresse = adresseClaim?.Value, // Utiliser la valeur du claim si elle existe
+        NumeroTelephone = user.PhoneNumber
+    };
+
+    return View(model);
+}
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
@@ -67,6 +90,70 @@ namespace Atelier_2.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public async Task<IActionResult> EditProfile()
+        {
+            var user = await userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            var claims = await userManager.GetClaimsAsync(user);
+            var adresseClaim = claims.FirstOrDefault(c => c.Type == "adresse");
+
+            var model = new ProfileViewModel
+            {
+                Email = user.Email,
+                Adresse = adresseClaim?.Value, // Utiliser la valeur du claim si elle existe
+                NumeroTelephone = user.PhoneNumber
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditProfile(ProfileViewModel model)
+        {
+            var user = await userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            user.PhoneNumber = model.NumeroTelephone;
+
+            // Check if Adresse is not null or empty before adding the claim
+            if (!string.IsNullOrEmpty(model.Adresse))
+            {
+                var claims = await userManager.GetClaimsAsync(user);
+                var adresseClaim = claims.FirstOrDefault(c => c.Type == "Adresse");
+
+                if (adresseClaim != null)
+                {
+                    await userManager.RemoveClaimAsync(user, adresseClaim);
+                }
+
+                await userManager.AddClaimAsync(user, new System.Security.Claims.Claim("Adresse", model.Adresse));
+            }
+
+            var result = await userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Profile");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View(model);
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model, string? returnUrl)
         {

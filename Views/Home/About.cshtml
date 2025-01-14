@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "À propos de nous";
+}
+
+@* Ajout du lien vers Bootstrap via CDN *@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJr4e+6r36NcDNq5ft63K5yV26g5XT97rWWGr5boHXARy0W27g1G0rFvLl8x" crossorigin="anonymous">
+    <style>
+        /* Améliorations visuelles et couleurs professionnelles */
+        .hero-section {
+            background-color: #333; /* Fond sombre */
+            color: #fff; /* Texte clair */
+            padding: 80px 0;
+            border-bottom: 2px solid #444; /* Légère séparation en bas */
+        }
+
+            .hero-section h1 {
+                font-size: 3rem;
+                font-weight: 600;
+            }
+
+            .hero-section p {
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+
+            .hero-section a.cta-button {
+                background-color: #333; /* Bouton sombre */
+                color: white;
+                padding: 12px 30px;
+                border-radius: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+            }
+
+                .hero-section a.cta-button:hover {
+                    background-color: #555; /* Hover plus clair */
+                }
+
+        /* Style de la section principale */
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #333; /* Texte sombre */
+        }
+
+        .about-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce pour l'image */
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #333; /* Titre principal sombre */
+        }
+
+        /* Amélioration des titres et des paragraphes */
+        h2 {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .text-muted {
+            color: #6c757d !important;
+        }
+
+        /* Ajout d'un fond neutre pour la section texte */
+        .row.align-items-center {
+            background-color: #f8f9fa; /* Fond clair */
+            padding: 50px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre douce */
+        }
+
+        /* Bouton CTA à la fin */
+        .cta-button {
+            background-color: #333;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 30px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+            .cta-button:hover {
+                background-color: #555; /* Effet hover */
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Section Hero -->
+        <div class="hero-section text-center">
+            <h1 class="display-4">À propos de nous</h1>
+            <p class="lead">Votre partenaire fiable pour la maintenance et la réparation de produits sanitaires et de chauffage</p>
+        </div>
+
+        <!-- Section "Qui sommes-nous ?" -->
+        <div class="row align-items-center mt-5">
+            <div class="col-lg-6">
+                <img src="~/images/plomberie.png" alt="Service Plomberie" class="img-fluid about-image shadow-lg">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title text-dark">Qui sommes-nous ?</h2>
+                <p class="about-text">
+                    Nous sommes une entreprise spécialisée dans la maintenance et la réparation des équipements sanitaires et de chauffage.
+                    Depuis plusieurs années, nous offrons des services de qualité pour assurer le confort de nos clients.
+                </p>
+                <p class="about-text">
+                    Notre équipe de professionnels est formée pour intervenir rapidement sur des équipements tels que chaudières, chauffe-eaux, radiateurs et autres systèmes de plomberie.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    @* Ajout de la bibliothèque JavaScript de Bootstrap *@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0y90z5kB0+5R8yK0KwdeXERENY8+VNCexwLw5ySP5bs9+k7l" crossorigin="anonymous"></script>
+</body>

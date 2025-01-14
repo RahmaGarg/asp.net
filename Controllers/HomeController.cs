@@ -22,7 +22,11 @@ namespace Atelier_2.Controllers
         {
             return View();
         }
-
+        // Action pour la page "À propos de nous"
+        public IActionResult About()
+        {
+            return View(); // Retourne la vue "About"
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

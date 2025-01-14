@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\images\\1.png"
     },
     {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\12.png",
+      "PackagePath": "staticwebassets\\images\\12.png"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\2.png",
       "PackagePath": "staticwebassets\\images\\2.png"
     },
@@ -57,8 +61,20 @@
       "PackagePath": "staticwebassets\\images\\6.png"
     },
     {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\about.png",
+      "PackagePath": "staticwebassets\\images\\about.png"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\accessdenied.png",
       "PackagePath": "staticwebassets\\images\\accessdenied.png"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\plomberie.png",
+      "PackagePath": "staticwebassets\\images\\plomberie.png"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\profil.png",
+      "PackagePath": "staticwebassets\\images\\profil.png"
     },
     {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\signin-image.jpg",

@@ -1,0 +1,134 @@
+﻿@model Atelier_2.ViewModels.ProfileViewModel
+
+@{
+    ViewBag.Title = "Mon Profil";
+}
+
+<div class="container py-5">
+    <div class="card shadow-lg mx-auto" style="max-width: 800px; border-radius: 15px;">
+        <div class="card-body">
+            <div class="row">
+                <!-- Image de profil (statique) -->
+                <div class="col-md-4 text-center">
+                    <img src="~/images/profil.png" alt="Image de Profil" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                   
+                </div>
+
+                <!-- Informations du profil -->
+                <div class="col-md-8">
+                    <h3 class="text-center mb-4">Mon Profil</h3>
+
+                    <dl class="row">
+                        <dt class="col-sm-4 font-weight-bold">Email</dt>
+                        <dd class="col-sm-8 text-muted">@Model.Email</dd>
+
+                        <dt class="col-sm-4 font-weight-bold">Adresse</dt>
+                        <dd class="col-sm-8 text-muted">@Model.Adresse</dd>
+
+                        <dt class="col-sm-4 font-weight-bold">Numéro de Téléphone</dt>
+                        <dd class="col-sm-8 text-muted">@Model.NumeroTelephone</dd>
+                    </dl>
+
+                    <!-- Bouton modifier -->
+                    <div class="text-center mt-4">
+                        <a asp-controller="Account" asp-action="EditProfile" class="btn btn-primary btn-lg px-5 py-3 shadow-sm">Modifier Profil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Styles -->
+<style>
+    /* Container */
+    .container {
+        background-color: #f8f9fc;
+        border-radius: 15px;
+    }
+
+    /* Image de profil */
+    .img-fluid {
+        border-radius: 50%; /* Pour arrondir l'image */
+        border: 4px solid #4e73df; /* Bordure colorée */
+    }
+
+    /* Card */
+    .card {
+        border-radius: 15px;
+        background-color: #ffffff;
+    }
+
+    .card-body {
+        padding: 30px;
+    }
+
+    /* Profile details */
+    dt {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #4e73df;
+    }
+
+    dd {
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    /* Bouton "Changer l'image" */
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        padding: 8px 16px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6368;
+        border-color: #5a6368;
+    }
+
+    /* Bouton "Modifier Profil" */
+    .btn-primary {
+        background-color: #4e73df;
+        border-color: #4e73df;
+        font-weight: 600;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #375aab;
+        border-color: #375aab;
+        transform: translateY(-2px); /* Animation au survol */
+    }
+
+    /* Titres */
+    h3 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2rem;
+        color: #4e73df;
+        font-weight: 700;
+    }
+
+    /* Espacements */
+    .btn {
+        margin-top: 20px;
+    }
+
+
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        .btn-primary {
+            font-size: 1rem;
+            padding: 12px 25px;
+        }
+    }
+</style>

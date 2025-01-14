@@ -15,6 +15,7 @@
 </head>
 <body>
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="/">
@@ -36,12 +37,18 @@
                     }
                     else
                     {
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Account" asp-action="Register">Inscription</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Account" asp-action="Login">Connexion</a>
-                        </li>
+                        var currentUrl = Context.Request.Path.Value;
+
+                        // Vérifiez si l'URL actuelle est la page d'accueil ou la page d'inscription
+                        if (currentUrl != "/" && currentUrl != "/Account/Register")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="Register">Inscription</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="Login">Connexion</a>
+                            </li>
+                        }
                     }
                 </ul>
             </div>
