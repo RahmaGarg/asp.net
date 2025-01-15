@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets\\images\\signup-image.jpg"
     },
     {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\tache.png",
+      "PackagePath": "staticwebassets\\images\\tache.png"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\CustomScript.js",
       "PackagePath": "staticwebassets\\js\\CustomScript.js"
     },

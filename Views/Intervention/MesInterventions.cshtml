@@ -1,0 +1,189 @@
+﻿@model IEnumerable<Atelier_2.Models.Intervention>
+
+<!-- Section Heading with Icon -->
+<h2 class="page-title">
+    <i class="fas fa-cogs"></i> Mes Interventions
+</h2>
+
+@if (!Model.Any())
+{
+    <p class="no-interventions">Aucune intervention assignée à vous pour le moment.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date Intervention</th>
+                <th>Réclamation</th>
+                <th>Produit</th>
+                <th>Phone</th>
+                <th>Client</th>
+                <th>Durée Intervention</th>
+                <th>Coût Total</th>
+                <th>État</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var intervention in Model)
+            {
+                <tr>
+                    <td>@intervention.DateIntervention.ToString("dd/MM/yyyy")</td>
+                    <td>@intervention.Reclamation?.Description</td>
+                    <td>@intervention.Reclamation?.Product?.Désignation</td>
+                    <td>@intervention.Reclamation?.User?.PhoneNumber</td>
+                    <td>@intervention.Reclamation?.User?.Email</td>
+                    <td>@intervention.DureeIntervention</td>
+                    <td>@intervention.CoutTotal.ToString("C")</td>
+                    <td>@intervention.Reclamation?.Etat</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<!-- Styles personnalisés pour améliorer l'apparence -->
+<style>
+    /* Font Awesome icon for Mes Interventions */
+    .page-title {
+        font-size: 30px; /* Augmentation de la taille du titre */
+        font-weight: bold;
+        color: #000000; /* Changer la couleur du titre en noir */
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+    }
+    .page-title i {
+        margin-right: 10px;
+        font-size: 32px; /* Agrandir l'icône */
+    }
+
+    /* No interventions message */
+    .no-interventions {
+        color: #6c757d;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+        font-style: italic;
+    }
+
+    /* Corps et police */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7fc;
+        padding: 30px;
+    }
+
+    /* Table */
+    .table {
+        width: 120%;
+        max-width: 1200px; /* Largeur maximale de la table */
+        margin-top: 20px;
+        background-color: #ffffff;
+        border-radius: 12px; /* Bords arrondis */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: box-shadow 0.3s ease-in-out;
+        border-spacing: 0;
+    }
+    .table:hover {
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .table th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        text-align: left;
+            text-align: center; /* Centrer le texte dans les cellules */
+
+        padding: 15px;
+        border-bottom: 2px solid #e9ecef;
+        color: #4e4e4e; /* Gris foncé pour le texte des titres */
+    }
+
+    .table td {
+        padding: 15px;
+            text-align: center; /* Centrer le texte dans les cellules */
+
+        border-bottom: 1px solid #e9ecef;
+        color: #495057;
+    }
+
+    .table tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Table Row Hover Effect */
+    .table tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Custom Buttons */
+    .btn {
+        padding: 12px 24px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #4e73df;
+        border-color: #4e73df;
+        color: #ffffff;
+    }
+
+    .btn-primary:hover {
+        background-color: #375aab;
+        border-color: #375aab;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #ffffff;
+    }
+
+    .btn-warning:hover {
+        background-color: #e0a800;
+        border-color: #d39e00;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: #ffffff;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Custom Create Button */
+    .btn-create {
+        margin-top: 30px;
+        display: inline-block;
+        background-color: #28a745;
+        color: #ffffff;
+        border-radius: 25px;
+        padding: 12px 25px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-create:hover {
+        background-color: #218838;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+   
+
+</style>
+
+<!-- Font Awesome for icons (add this in your head or import it) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">

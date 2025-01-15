@@ -28,14 +28,9 @@
                 <td>@intervention.CoutTotal.ToString("C")</td>
                 <td>@intervention.DureeIntervention</td>
                 <td>
-                    @if (intervention.EstSousGarantie)
-                    {
+                 
                         <span class="text-success">Oui</span>
-                    }
-                    else
-                    {
-                        <span class="text-danger">Non</span>
-                    }
+                  
                 </td>
                 <td>
                     <a href="@Url.Action("AfficherIntervention", "Intervention", new { id = intervention.Id })" class="btn btn-info">Voir</a>

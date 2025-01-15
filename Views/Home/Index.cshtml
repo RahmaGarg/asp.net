@@ -79,6 +79,35 @@
                 </div>
             </div>
         }
+        else if (User.IsInRole("Technicien"))
+        {
+            <!-- Section pour les techniciens -->
+            <div class="row">
+                <!-- Card pour consulter le profil -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="~/images/profil.png" class="card-img-top" alt="Consulter Profil">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mon Profil</h5>
+                            <p class="card-text">Consultez vos informations de profil.</p>
+                            <a href="@Url.Action("Profile", "Account")" class="btn btn-primary">Accéder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card pour mes tâches -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="~/images/tache.png" class="card-img-top" alt="Mes Tâches">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mes Tâches</h5>
+                            <p class="card-text">Consultez et gérez vos tâches assignées.</p>
+                            <a href="@Url.Action("MesInterventions", "Intervention")" class="btn btn-primary">Accéder</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
         else
         {
             <!-- Section pour les utilisateurs -->

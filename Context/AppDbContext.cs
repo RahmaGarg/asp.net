@@ -15,8 +15,7 @@ namespace Atelier_2.Context
         // DbSet for Product entity
         public DbSet<Product> Products { get; set; }
 
-        // DbSet for Client entity
-        public DbSet<Client> Clients { get; set; }
+       
 
         // DbSet for Reclamation entity
         public DbSet<Reclamation> Reclamations { get; set; }

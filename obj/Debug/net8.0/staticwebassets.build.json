@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ks159ur3XoFHZBKeEnSMpd+BL4GGWZtfOcaZ4TfTFJg=",
+  "Hash": "8NpPYxrTiKr53NSy+hJGHNMOwjgOgMAJEdk4j8GBWjc=",
   "Source": "Atelier_2",
   "BasePath": "_content/Atelier_2",
   "Mode": "Default",
@@ -433,6 +433,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\signup-image.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\images\\tache.png",
+      "SourceId": "Atelier_2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\",
+      "BasePath": "_content/Atelier_2",
+      "RelativePath": "images/tache.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\tache.png"
     },
     {
       "Identity": "C:\\Users\\ASUS\\source\\repos\\Atelier_2\\wwwroot\\js\\CustomScript.js",

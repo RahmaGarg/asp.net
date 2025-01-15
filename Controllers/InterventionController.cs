@@ -183,6 +183,27 @@ namespace Atelier_2.Controllers
 
             return RedirectToAction(nameof(ManageInterventions)); // Rediriger vers la liste des interventions
         }
+        public async Task<IActionResult> MesInterventions()
+        {
+            // Get the current authenticated user (technician)
+            var technicienId = _userManager.GetUserId(User);
+
+            if (technicienId == null)
+            {
+                return Unauthorized(); // If no user is authenticated, return Unauthorized
+            }
+
+            // Get all interventions assigned to the authenticated technician
+            var interventions = await _context.Interventions
+                .Include(i => i.Reclamation)  // Include related reclamation
+                        .Include(i => i.Reclamation.Product)  // Inclure le produit de la réclamation
+                                .Include(i => i.Reclamation.User)  // Inclure l'utilisateur de la réclamation
+
+                .Where(i => i.TechnicienId == technicienId) // Filter by technician
+                .ToListAsync();
+
+            return View(interventions); // Return a view with the list of interventions
+        }
 
         public async Task<IActionResult> ManageInterventions()
         {
